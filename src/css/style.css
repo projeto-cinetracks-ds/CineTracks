@@ -1,0 +1,128 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+:root{
+     --gradrosa:linear-gradient(to right, #f6e0d2, #640d41);
+    --bege: #f6e0d2;
+    --rosa-escuro: #1e0012;
+    --rosa-medio: #640d41;
+    --dourado: #e4b23a;
+}
+body{
+    background-color: var(--rosa-escuro);
+}
+header{
+    background: var(--gradrosa);
+    display: flex;
+    height: 100px;
+    width: 100%;
+     text-align: center;
+     z-index: 2;
+}
+.logo{
+    height: 100px;
+    width: 170px;
+}
+#pesquisa{
+    height: 25px;
+    margin-top: 35px;
+    border-radius: 15px;
+    border: #f6e0d2;
+    width: 200px;
+    padding: 5px;
+    font-weight: bold;
+    margin-left: -25px;
+  
+}
+
+.menu-header{
+  
+    list-style: none;
+    margin-left: 980px;
+    display: flex;
+    margin-top: 35px;
+    
+}
+.item-menu {
+    margin: 10px; 
+    color: var(--bege);
+    text-decoration: none;
+    font-size: large;
+}
+#login {
+    font-size: large;
+    margin: 10px; 
+    color: var(--bege);
+     text-decoration: none;
+}
+/* main{
+    overflow: scroll;
+} */
+.subtitulo-1{
+    color:var(--bege);
+    margin:23px;
+    margin-left: 35px;
+    font-size: 22px;
+}
+.soundtracks-alta{
+   display: flex;
+   margin: 30px;
+   margin-top: 15px;
+   margin-left: -100px;
+   
+}
+.msc img{
+    margin: 5px;
+    width: 150px;
+    margin-left: 60px;
+    border-radius: 50%;
+}
+.subtitulo-2{
+     color:var(--bege);
+    margin:23px;
+    margin-left: 35px;
+    font-size: 22px;
+}
+.filmes{
+   display: flex;
+   margin: 30px;
+   margin-top: 30px;
+   margin-left: -100px;
+}
+.filme img{
+    width: 180px;
+    margin: 5px;
+   
+    margin-left: 43px;
+}
+.nome-filme{
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 113px;
+    color: var(--bege);
+    font-weight: bold; 
+   
+}
+.ano-lanc{
+      font-size: 16px;
+    text-decoration: none;
+    margin-left: 118px;
+    color: var(--bege);
+    font-weight: bold; 
+}
+   
+footer{
+    background: var(--rosa-medio);
+    display: flex;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    color: var(--dourado);
+    justify-content: center;
+}
+.icone{
+    width: 43px;
+    margin-top: 12px;
+}
