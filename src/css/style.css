@@ -276,7 +276,7 @@ header{
 .filme img{
     width: 180px;
     margin: 5px;
-   
+    height: 260px;
     margin-left: 43px;
 }
 .filme img:hover{

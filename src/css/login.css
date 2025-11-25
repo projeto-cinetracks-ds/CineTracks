@@ -1,0 +1,165 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+:root{
+    --gradrosa:linear-gradient(to right, #f6e0d2, #640d41,#640d41);
+    --bege: #f6e0d2;
+    --rosa-escuro: #1e0012;
+    --rosa-medio: #640d41;
+    --dourado: #e4b23a;
+    --grad2: linear-gradient(rgba(42, 0, 26, 0.393));
+
+}
+body{
+    background: var(--grad2), url("/src/assets/img/teste.png");
+}
+/* body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* 0.4 = leve escurecido 
+} */
+header{
+    background: var(--gradrosa);
+    display: flex;
+    height: 100px;
+    width: 100%;
+     text-align: center;
+     z-index: 2;
+}
+.logo{
+    height: 100px;
+    width: 170px;
+}
+
+.menu-header{
+  
+    list-style: none;
+    margin-left: 1200px;
+    display: flex;
+    margin-top: 35px;
+    
+}
+.item-menu {
+    margin: 10px; 
+    color: var(--bege);
+    text-decoration: none;
+    font-size: large;
+    padding: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.item-menu::before,
+.item-menu::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+        rgba(255, 100, 150, 0), 
+        rgba(255, 100, 150, 1), 
+        rgba(255, 100, 150, 0));
+
+  box-shadow: 0 0 10px rgba(255, 100, 150, 0.8),
+              0 0 20px rgba(255, 100, 150, 0.6),
+              0 0 40px rgba(255, 100, 150, 0.5);
+
+  opacity: 0;
+  transition: .5s;
+}
+
+.item-menu::before {
+  left: 0;
+  top: 0;
+}
+
+.item-menu::after {
+  right: 0;
+  bottom: 0;
+}
+
+.item-menu:hover::before,
+.item-menu:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+/* .estrela-fundo{
+    position: relative;
+    margin-top: -153px;
+    margin-left: -150px;
+    margin-bottom: -82px;
+}
+.estrela-fundo img{
+    width: 1000px;
+} */
+ .conteudo{
+    display: flex;
+   
+    justify-content: center;
+ }
+form{
+    margin-top: 50px;
+     width: 500px;
+    background-color: var(--rosa-medio);
+    text-align: center;
+    height: auto; /* deixa a altura crescer com os campos */
+    color: #fff;
+    display: flex;           /* importante! */
+    flex-direction: column;  /* coloca tudo em coluna */
+    align-items: center;     /* centraliza horizontalmente os inputs e labels */
+    gap: 15px;               /* espaço entre cada elemento */
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 5%;
+}
+form h2{
+    font-size: 2rem;
+}
+.lbl-email{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: -40px;
+}
+#email{
+    width: 350px;
+    height: 50px;
+}
+   
+#lbl-senha{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#senha{
+    width: 350px;
+    height: 50px;
+}
+   
+footer{
+    position: absolute;
+    background: var(--rosa-medio);
+    display: flex;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    color: var(--bege);
+    justify-content: center;
+}
+.icone{
+    width: 43px;
+    margin-top: 12px;
+}
+
+ @keyframes efeito1 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
