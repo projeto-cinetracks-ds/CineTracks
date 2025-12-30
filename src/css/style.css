@@ -4,26 +4,29 @@
     box-sizing: border-box;
 }
 :root{
-     --gradrosa:linear-gradient(to right, #f6e0d2, #640d41,#640d41);
+     --gradvermelho:linear-gradient(to right, #620606,#620606, #620606,#EFDAA4);
     --bege: #f6e0d2;
-    --rosa-escuro: #1e0012;
-    --rosa-medio: #640d41;
+    --preto: #0000;
+    --vermelho: #620606;
     --dourado: #e4b23a;
+    --vermelhoescuro:#280404;
 }
 body{
-    background-color: var(--rosa-escuro);
+    background-color: black;
 }
 header{
-    background: var(--gradrosa);
+    background: var(--gradvermelho);
     display: flex;
     height: 100px;
     width: 100%;
      text-align: center;
      z-index: 2;
+     gap:15px;
 }
 .logo{
-    height: 100px;
-    width: 170px;
+    height: 90px;
+    margin-left: 7px;
+    margin-top: 4px;
 }
 #busca{
     height: 25px;
@@ -33,7 +36,8 @@ header{
     width: 200px;
     padding: 5px;
     font-weight: bold;
-    margin-left: -25px;
+    margin-left: 20px;
+    
   
 }
 
@@ -43,16 +47,20 @@ header{
     margin-left: 980px;
     display: flex;
     margin-top: 35px;
+    gap:50px;
     
 }
 .item-menu {
     margin: 10px; 
-    color: var(--bege);
+    
     text-decoration: none;
     font-size: large;
     padding: 2px;
     position: relative;
     overflow: hidden;
+    font-family: 'odor mean chey';
+    color: var(--vermelhoescuro);
+    
 }
 
 .item-menu::before,
@@ -92,13 +100,15 @@ header{
 
 
 #login {
-    font-size: large;
+    font-size: 20px;
     margin: 10px; 
-    color: var(--bege);
+   
     text-decoration: none;
     padding: 2px;
     position: relative;
     overflow: hidden;
+    font-family: 'odor mean chey';
+    color: var(--vermelhoescuro);
 }
 
 
@@ -230,6 +240,8 @@ header{
     margin:23px;
     margin-left: 35px;
     font-size: 22px;
+    font-family: 'odor mean chey';
+    font-weight: 100;
 }
 .soundtracks-alta{
    display: flex;
@@ -260,6 +272,9 @@ header{
     margin:23px;
     margin-left: 35px;
     font-size: 22px;
+    font-family: "odor mean chey";
+    font-weight: 100;
+
 }
 .filmes{
    display: flex;
@@ -300,7 +315,7 @@ header{
 }
    
 footer{
-    background: var(--rosa-medio);
+    background: var(--vermelho);
     display: flex;
     height: 100px;
     width: 100%;
