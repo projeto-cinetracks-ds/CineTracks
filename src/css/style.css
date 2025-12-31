@@ -36,30 +36,33 @@ header{
     width: 200px;
     padding: 5px;
     font-weight: bold;
-    margin-left: 20px;
+    /* margin-left: 20px;
+   */
     
   
 }
-
+/* SOPHIA, ARRUME ESSE NAV AAAAAA */
 .menu-header{
   
     list-style: none;
-    margin-left: 980px;
+    margin-left: 940px;
     display: flex;
     margin-top: 35px;
-    gap:50px;
+    gap:20px;
     
 }
 .item-menu {
-    margin: 10px; 
+    /* margin: 10px;  */
     
     text-decoration: none;
-    font-size: large;
+    font-size: 20px;
     padding: 2px;
     position: relative;
     overflow: hidden;
     font-family: 'odor mean chey';
     color: var(--vermelhoescuro);
+    
+    white-space: nowrap;
     
 }
 
@@ -71,12 +74,12 @@ header{
   height: 2px;
   background: linear-gradient(90deg, 
         rgba(255, 100, 150, 0), 
-        rgba(255, 100, 150, 1), 
+        rgb(250, 196, 1), 
         rgba(255, 100, 150, 0));
 
-  box-shadow: 0 0 10px rgba(255, 100, 150, 0.8),
-              0 0 20px rgba(255, 100, 150, 0.6),
-              0 0 40px rgba(255, 100, 150, 0.5);
+  box-shadow: 0 0 10px rgba(255, 199, 96, 0.8),
+              0 0 20px rgba(255, 199, 96, 0.6),
+              0 0 40px rgba(255, 199, 96, 0.5);
 
   opacity: 0;
   transition: .5s;
@@ -101,7 +104,7 @@ header{
 
 #login {
     font-size: 20px;
-    margin: 10px; 
+    /* margin: 10px;  */
    
     text-decoration: none;
     padding: 2px;
@@ -249,6 +252,7 @@ header{
    margin-top: 15px;
    margin-left: -30px;
    animation: efeito1 100s linear infinite;
+   
    
 }
 .msc img{
