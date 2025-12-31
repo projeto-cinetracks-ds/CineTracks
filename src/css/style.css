@@ -13,6 +13,9 @@
 }
 body{
     background-color: black;
+     touch-action: pan-y;
+      overflow-x: hidden;
+  overflow-y: auto;
 }
 header{
     background: var(--gradvermelho);
@@ -123,12 +126,12 @@ header{
   height: 2px;
   background: linear-gradient(90deg, 
         rgba(255, 100, 150, 0), 
-        rgba(255, 100, 150, 1), 
+        rgba(250, 196, 1), 
         rgba(255, 100, 150, 0));
 
-  box-shadow: 0 0 10px rgba(255, 100, 150, 0.8),
-              0 0 20px rgba(255, 100, 150, 0.6),
-              0 0 40px rgba(255, 100, 150, 0.5);
+  box-shadow: 0 0 10px rgba(255, 199, 96, 0.8),
+              0 0 20px rgba(255, 199, 96, 0.6),
+              0 0 40px rgba(255, 199, 96, 0.5);
 
   opacity: 0;
   transition: .5s;
@@ -266,10 +269,10 @@ header{
     transform: scale(1.02);
     transition: 0.3s;
     border: solid 2px;
-    border-color: #82375480;  /* muda a borda para rosa */
-    box-shadow: 0 0 10px rgba(187, 73, 109, 0.523),
-                0 0 20px rgba(162, 63, 94, 0.484),
-                0 0 30px rgba(152, 59, 88, 0.252);
+    border-color: #ffcc0080;  /* muda a borda para rosa */
+    box-shadow: 0 0 10px rgba(255, 199, 96, 0.523),
+                0 0 20px rgba(255, 199, 96, 0.484),
+                0 0 30px rgba(255, 199, 96, 0.252);
 }
 .subtitulo-2{
      color:var(--bege);
@@ -305,9 +308,10 @@ header{
 .nome-filme{
     font-size: 16px;
     text-decoration: none;
-    margin-left: 113px;
+    margin-left: 20px;
     color: var(--bege);
     font-weight: bold; 
+    text-align: center;
    
 }
 .ano-lanc{
