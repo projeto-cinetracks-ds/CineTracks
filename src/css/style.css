@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{
-     --gradvermelho:linear-gradient(to right, #620606,#620606, #620606,#EFDAA4);
+     --gradvermelho:linear-gradient(to right,#0000,#000,#620606,#EFDAA4);
     --bege: #f6e0d2;
     --preto: #0000;
     --vermelho: #620606;
