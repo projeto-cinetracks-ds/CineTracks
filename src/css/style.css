@@ -76,10 +76,11 @@ header{
 .menu-header{
   
     list-style: none;
-    margin-left: 940px;
+    margin-left: 900px;
     display: flex;
     margin-top: 35px;
     gap:20px;
+    /* margin-right: 5px; */
     
 }
 .item-menu {
@@ -94,10 +95,20 @@ header{
     color: var(--vermelhoescuro);
     
     white-space: nowrap;
-    
+}
+#login {
+    font-size: 20px;
+    /* margin: 10px;  */
+   
+    text-decoration: none;
+    padding: 2px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'odor mean chey';
+    color: var(--vermelhoescuro);
 }
 
-.item-menu::before,
+/* .item-menu::before,
 .item-menu::after {
   content: "";
   position: absolute;
@@ -130,23 +141,13 @@ header{
 .item-menu:hover::after {
   width: 100%;
   opacity: 1;
-}
+} */
 
 
-#login {
-    font-size: 20px;
-    /* margin: 10px;  */
-   
-    text-decoration: none;
-    padding: 2px;
-    position: relative;
-    overflow: hidden;
-    font-family: 'odor mean chey';
-    color: var(--vermelhoescuro);
-}
 
 
-#login::before,
+
+/* #login::before,
 #login::after {
   content: "";
   position: absolute;
@@ -179,7 +180,7 @@ header{
 #login:hover::after {
   width: 100%;
   opacity: 1;
-}
+} */
 
 
 /* TESTE EFEITOS */
