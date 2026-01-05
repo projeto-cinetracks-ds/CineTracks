@@ -18,13 +18,6 @@ body{
   overflow-y: auto;
 }
 header{
-  /* ISSO É TESTE DO SHOT DA ESTRELA, É HORRIVEL DE FAZER, NÃO DA CRT */
-    /* background: linear-gradient(90deg, #620606 70%,#EFDAA4 30% );
-
- 
-  background-size: 200% 210%;
-
-  animation: gradiente 2s ease-out forwards; */
   background: var(--gradvermelho);
 
     display: flex;
@@ -34,25 +27,6 @@ header{
      z-index: 2;
      gap:15px;
 }
-/* TESTE DO SHOT, HORRIVEL, TEM Q ESTUDAR MAIS */
- /* @keyframes gradiente {
-  from {
-    background-position: -400% 0%;
-  }
-
-  to {
-    background-position: 0% 0; 
-  }
- } */
-
-
-
-
-
-
-
-
-
 
 .logo{
     height: 90px;
@@ -67,12 +41,11 @@ header{
     width: 200px;
     padding: 5px;
     font-weight: bold;
-    /* margin-left: 20px;
-   */
+   
     
   
 }
-/* SOPHIA, ARRUME ESSE NAV AAAAAA */
+
 .menu-header{
   
     list-style: none;
@@ -80,12 +53,11 @@ header{
     display: flex;
     margin-top: 35px;
     gap:20px;
-    /* margin-right: 5px; */
+   
     
 }
 .item-menu {
-    /* margin: 10px;  */
-    
+   
     text-decoration: none;
     font-size: 20px;
     padding: 2px;
@@ -98,7 +70,7 @@ header{
 }
 #login {
     font-size: 20px;
-    /* margin: 10px;  */
+    
    
     text-decoration: none;
     padding: 2px;
@@ -108,6 +80,135 @@ header{
     color: var(--vermelhoescuro);
 }
 
+
+.subtitulo-1{
+    color:var(--bege);
+    margin:23px;
+    margin-left: 35px;
+    font-size: 22px;
+    font-family: 'odor mean chey';
+    font-weight: 100;
+}
+.soundtracks-alta{
+   display: flex;
+   margin: 30px;
+   margin-top: 15px;
+   margin-left: -30px;
+   animation: efeito1 100s linear infinite;
+   
+   
+}
+.msc img{
+    margin: 5px;
+    width: 150px;
+    margin-left: 60px;
+    border-radius: 50%;
+     transition: 3s;   
+}
+.msc img:hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+    border: solid 2px;
+    border-color: #ffcc0080;  /* muda a borda para rosa */
+    box-shadow: 0 0 10px rgba(255, 199, 96, 0.523),
+                0 0 20px rgba(255, 199, 96, 0.484),
+                0 0 30px rgba(255, 199, 96, 0.252);
+}
+.subtitulo-2{
+     color:var(--bege);
+    margin:23px;
+    margin-left: 35px;
+    font-size: 22px;
+    font-family: "odor mean chey";
+    font-weight: 100;
+
+}
+.filmes{
+   display: flex;
+   margin: 30px;
+   margin-top: 30px;
+   margin-left: -5px;
+}
+.filme {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;   /* distancia entre os cards */
+}
+
+.filme img{
+    width: 180px;
+    margin: 5px;
+    height: 260px;
+    margin-left: 43px;
+}
+.filme img:hover{
+     transform: scale(1.02);
+    transition: 0.3s;
+}
+.nome-filme{
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 20px;
+    color: var(--bege);
+    font-weight: bold; 
+    text-align: center;
+   
+}
+.ano-lanc{
+      font-size: 16px;
+    text-decoration: none;
+    margin-left: 118px;
+    color: var(--bege);
+    font-weight: bold; 
+}
+   
+footer{
+  margin-top: 30px;
+    background: var(--vermelho);
+    display: flex;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    color: var(--bege);
+    justify-content: center;
+}
+.footer-container{
+  margin-top: 10px;
+}
+@font-face {
+  font-family: 'Etna';
+  src: url('../fonts/etna-free-font.otf') format('truetype');
+}
+#direitos-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+#copy{
+  font-family: 'open sans';
+}
+#tracks-footer{
+  font-family: 'Etna';
+}
+#cine-footer{
+  font-family: 'norwester';
+}
+
+.icone{
+    width: 75px;
+    margin-top: 12px;
+    
+
+}
+
+ @keyframes efeito1 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 /* .item-menu::before,
 .item-menu::after {
   content: "";
@@ -270,106 +371,20 @@ header{
 /* main{
     overflow: scroll;
 } */
-.subtitulo-1{
-    color:var(--bege);
-    margin:23px;
-    margin-left: 35px;
-    font-size: 22px;
-    font-family: 'odor mean chey';
-    font-weight: 100;
-}
-.soundtracks-alta{
-   display: flex;
-   margin: 30px;
-   margin-top: 15px;
-   margin-left: -30px;
-   animation: efeito1 100s linear infinite;
-   
-   
-}
-.msc img{
-    margin: 5px;
-    width: 150px;
-    margin-left: 60px;
-    border-radius: 50%;
-     transition: 3s;   
-}
-.msc img:hover{
-    transform: scale(1.02);
-    transition: 0.3s;
-    border: solid 2px;
-    border-color: #ffcc0080;  /* muda a borda para rosa */
-    box-shadow: 0 0 10px rgba(255, 199, 96, 0.523),
-                0 0 20px rgba(255, 199, 96, 0.484),
-                0 0 30px rgba(255, 199, 96, 0.252);
-}
-.subtitulo-2{
-     color:var(--bege);
-    margin:23px;
-    margin-left: 35px;
-    font-size: 22px;
-    font-family: "odor mean chey";
-    font-weight: 100;
+  /* ISSO É TESTE DO SHOT DA ESTRELA, É HORRIVEL DE FAZER, NÃO DA CRT */
+    /* background: linear-gradient(90deg, #620606 70%,#EFDAA4 30% );
 
-}
-.filmes{
-   display: flex;
-   margin: 30px;
-   margin-top: 30px;
-   margin-left: -5px;
-}
-.filme {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;   /* distancia entre os cards */
-}
+ 
+  background-size: 200% 210%;
 
-.filme img{
-    width: 180px;
-    margin: 5px;
-    height: 260px;
-    margin-left: 43px;
-}
-.filme img:hover{
-     transform: scale(1.02);
-    transition: 0.3s;
-}
-.nome-filme{
-    font-size: 16px;
-    text-decoration: none;
-    margin-left: 20px;
-    color: var(--bege);
-    font-weight: bold; 
-    text-align: center;
-   
-}
-.ano-lanc{
-      font-size: 16px;
-    text-decoration: none;
-    margin-left: 118px;
-    color: var(--bege);
-    font-weight: bold; 
-}
-   
-footer{
-    background: var(--vermelho);
-    display: flex;
-    height: 100px;
-    width: 100%;
-    text-align: center;
-    color: var(--bege);
-    justify-content: center;
-}
-.icone{
-    width: 43px;
-    margin-top: 12px;
-}
+  animation: gradiente 2s ease-out forwards; */
+  /* TESTE DO SHOT, HORRIVEL, TEM Q ESTUDAR MAIS */
+ /* @keyframes gradiente {
+  from {
+    background-position: -400% 0%;
+  }
 
- @keyframes efeito1 {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
+  to {
+    background-position: 0% 0; 
+  }
+ } */
