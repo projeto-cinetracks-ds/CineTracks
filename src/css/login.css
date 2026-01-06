@@ -26,23 +26,22 @@ body{
 
 header{
     background: var(--gradvermelho);
-
     display: flex;
     height: 100px;
     width: 100%;
-     text-align: center;
-     z-index: 2;
-     gap:15px;
+    text-align: center;
+    z-index: 2;
+    gap:15px;
 }
 .logo{
-     height: 90px;
+     max-height: 90px;
     margin-left: 7px;
     margin-top: 4px;
 }
 
 .menu-header{
   
-   list-style: none;
+    list-style: none;
     margin-left: 1090px;
     display: flex;
     margin-top: 35px;
@@ -124,7 +123,7 @@ footer{
     justify-content: center;
     margin-bottom: 0px;
 }
-.footer-container{
+ .footer-container{
   margin-top: 10px;
 
 }
