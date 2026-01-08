@@ -16,7 +16,17 @@ body{
   touch-action: pan-y;  /*para não ver o fim do carrossel */
   overflow-x: hidden;  /*para não ver o fim do carrossel */
   overflow-y: auto;   /*para não ver o fim do carrossel */
+ 
 }
+  .wrapper {
+ min-height: 100vh;      /* página sempre do tamanho da tela */
+  display: flex;          /* NÃO é no body */
+  flex-direction: column; /* conteúdo em coluna */
+  }
+  main{
+  flex: 1;
+}
+
 header{
   background: var(--gradvermelho);
   display: flex;
@@ -84,7 +94,7 @@ header{
     color:var(--bege);
     margin:23px;
     margin-left: 35px;
-    font-size: 22px;
+    font-size: 1.4rem;
     font-family: 'odor mean chey';
     font-weight: 100;
 }
@@ -117,7 +127,7 @@ header{
      color:var(--bege);
     margin:23px;
     margin-left: 35px;
-    font-size: 22px;
+    font-size: 1.4rem;
     font-family: "odor mean chey";
     font-weight: 100;
 
@@ -167,7 +177,7 @@ footer{
   margin-top: 30px;
     background: var(--vermelho);
     display: flex;
-    height: 100px;
+   min-height: 100px;
     width: 100%;
     text-align: center;
     color: var(--bege);
@@ -239,12 +249,37 @@ footer{
     height: 197px;
     margin-left: 43px;
 }
+.subtitulo-1{
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.subtitulo-2{
+  font-size: 1rem;
+}
+footer{
   
-  
+    background: var(--vermelho);
+    display: flex;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    color: var(--bege);
+    justify-content: center;
+   
+}
+body {
+  height: 100%;
+  margin: 0;
+ 
+}
+main{
+  flex:1;
 }
 
+
 @media (max-width: 480px) {
-  /* celular comum */
+ 
+}
 }
 
 
