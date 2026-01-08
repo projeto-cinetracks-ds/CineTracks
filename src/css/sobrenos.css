@@ -10,7 +10,13 @@
     --vermelho: #620606;
     --dourado: #e4b23a;
     --vermelhoescuro:#280404;
+    --vermelhosemiescuro:#520909;
 }
+/*body{
+   background: linear-gradient(to bottom,#000,#520909 ); ATIVE DEPOIS AAAAAA*/
+
+
+
 header{
   background: var(--gradvermelho);
   display: flex;
