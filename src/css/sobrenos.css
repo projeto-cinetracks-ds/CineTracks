@@ -14,7 +14,7 @@
     --texturadourada:linear-gradient(to right,#e4b23a,#f8d175,#e4b23a);
 }
 body{
-   background: linear-gradient(to bottom,#000,#520909 ); 
+   background: linear-gradient(to bottom,#000,#000,#000,#000,#000,#000,#520909,#520909,#520909,#520909,#520909 ); 
 }
 
 
@@ -82,12 +82,13 @@ header{
     font-family: 'odor mean chey';
     color: var(--vermelhoescuro);
 }
+
+
+/* BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 
+BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1*/
 .titulocinetracks{
   display: flex;
   justify-content: center;
- 
-  
-  
 }
 #Cine{
   background: linear-gradient(to right, #e4b23a, #f8d175,#e4b23a);
@@ -196,6 +197,28 @@ header{
   font-size: 2.5rem;
   font-weight:600;
 }
+/* BLOCO 2 BLOCO 2 BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 
+BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2*/
+
+.container-desenvolvedoras{
+  display: flex;
+  gap:50px;
+  margin-top: 50px;
+}
+#titulodesenvolvedoras{
+  font-family: 'norwester';
+  font-size: 7rem;
+  text-align: center;
+  color: #fff;
+}
+#card-otime{
+   justify-content: center;
+  border-radius: 70px;
+  background-color:#000;
+  padding: 30px;
+  width: 100%;
+
+}
 
 
 
@@ -203,7 +226,79 @@ header{
 
 
 
-/* COLOQUE O CONTEUDO AKI, NESTA REGIÃO */
+/* caixa de desenvolvedora */
+.card-desenvolvedora-esquerda{
+  border-radius: 50px;
+  padding:10px;
+  background-color: #000;
+    display: flex;
+  align-items: center;
+  padding-left: 5px;
+   margin-top: 30px;
+   max-width: 100%;
+}
+
+.coluna-esquerda-desenvolvedoras{
+  margin-left: 20px;
+
+}
+
+.nome{
+  font-family: 'bebas neue';
+  color:#fff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+.ocupacao{
+  font-family: 'bebas neue';
+  color:#ffffff82;
+  text-align: center;
+  margin-top: -4px;
+  
+}
+.redes{
+  justify-content: center;
+  display: flex;
+  gap:30px;
+  margin-top: 30px;
+}
+.foto{
+  border-radius: 70px;
+  width: 15%;
+  object-fit: cover;
+  margin-left: 20px;
+}
+.icones-desenvolvedoras{
+   width: 9%;
+}
+
+/* DIREITAAAAA DIREITAAAA */
+
+.coluna-direita-desenvolvedoras{
+   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+}
+.card-desenvolvedora-direita{
+   border-radius: 50px;
+ padding:10px;
+  background-color: #000;
+    display: flex;
+  align-items: center;
+  padding-left: 5px;
+  max-width: 100%;
+  margin-top: 30px;
+  margin-right: 10px;
+
+}
+
+
+
+
+
+
 
 
 
@@ -213,7 +308,7 @@ header{
 
 footer{
   margin-top: 30px;
-    background: var(--vermelho);
+    background: #000;
     display: flex;
    min-height: 100px;
     width: 100%;
@@ -242,10 +337,14 @@ footer{
 #cine-footer{
   font-family: 'norwester';
 }
-
+#icones{
+  gap: 30px;
+}
 .icone{
-    width: 75px;
+    width: 32px;
     margin-top: 12px;
+    margin-left: 30px;
+   
     
 
 }
