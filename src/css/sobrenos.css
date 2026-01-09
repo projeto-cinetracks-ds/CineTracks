@@ -11,9 +11,11 @@
     --dourado: #e4b23a;
     --vermelhoescuro:#280404;
     --vermelhosemiescuro:#520909;
+    --texturadourada:linear-gradient(to right,#e4b23a,#f8d175,#e4b23a);
 }
-/*body{
-   background: linear-gradient(to bottom,#000,#520909 ); ATIVE DEPOIS AAAAAA*/
+body{
+   background: linear-gradient(to bottom,#000,#520909 ); 
+}
 
 
 
@@ -48,10 +50,12 @@ header{
 .menu-header{
   
     list-style: none;
-    margin-left: 900px;
+   margin-left: 1100px;
     display: flex;
     margin-top: 35px;
     gap:20px;
+   
+  
    
     
 }
@@ -64,7 +68,7 @@ header{
     overflow: hidden;
     font-family: 'odor mean chey';
     color: var(--vermelhoescuro);
-    
+   
     white-space: nowrap;
 }
 #login {
@@ -78,6 +82,121 @@ header{
     font-family: 'odor mean chey';
     color: var(--vermelhoescuro);
 }
+.titulocinetracks{
+  display: flex;
+  justify-content: center;
+ 
+  
+  
+}
+#Cine{
+  background: linear-gradient(to right, #e4b23a, #f8d175,#e4b23a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'norwester';
+  font-size: 9rem;
+ margin-top: auto;
+ font-weight: 400;
+}
+#tracks{
+  background: linear-gradient(to right, #e4b23a, #f8d175,#e4b23a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Etna';
+  font-size: 7rem;
+  margin-top: 38px;
+}
+
+
+
+
+.container-cards{
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  padding: 20px;
+  margin-left: 25px;
+  margin-right: 40px;
+}
+.coluna-esquerda-cinetracks{
+  
+  margin: 0 auto;
+  justify-content: center;
+  
+}
+#card-quemsomos{
+  justify-content: center;
+  border-radius: 70px;
+  background-color: var(--vermelhosemiescuro);
+  padding: 30px;
+  width: 90%;
+  margin-left: auto;
+  padding-top: 10px;
+  
+  
+  
+}
+#card-contatos{
+   justify-content: center;
+   border-radius: 70px;
+  background-color:  var(--vermelhosemiescuro);
+  padding: 5px;
+  margin-top: 50px;
+  padding-bottom: 28px;
+ width: 90%;
+ margin-left: auto;
+ 
+
+}
+#titulo-contatos{
+  font-size: 2.3rem;
+}
+.icones-contatos-cinetracks{
+  display: flex;
+  gap:15px;
+ justify-content: center;
+ margin-top: 10px;
+}
+.contatos-cinetracks{
+  width: 18%;
+}
+.coluna-direita-cinetracks{
+  width: 9070px;
+
+}
+#card-nossoobjetivo{
+  justify-content: center;
+  border-radius: 70px;
+  background-color:  var(--vermelhosemiescuro);
+  padding: 30px;
+  padding-top: 10px;
+}
+#card-nossaidentidade{
+  justify-content: center;
+  border-radius: 70px;
+  background-color: var(--vermelhosemiescuro);
+  padding: 30px;
+  margin-top: 50px;
+  padding-top: 10px;
+
+}
+
+
+.texto{
+  text-align: justify;
+  color: #ffff;
+  font-size: 1.4rem;
+  font-family: 'open sans';
+}
+.titulo-card{
+  color:#fff;
+  font-family: 'bebas neue';
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight:600;
+}
+
 
 
 
