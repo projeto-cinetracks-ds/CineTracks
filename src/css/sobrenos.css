@@ -14,11 +14,8 @@
     --texturadourada:linear-gradient(to right,#e4b23a,#f8d175,#e4b23a);
 }
 body{
-   background: linear-gradient(to bottom,#000,#000,#000,#000,#000,#000,#520909,#520909,#520909,#520909,#520909 ); 
+   background: linear-gradient(to bottom,#000,#000,#000,#000,#000,#000,#250303,#250303,#250303,#250303,#250303 ); 
 }
-
-
-
 header{
   background: var(--gradvermelho);
   display: flex;
@@ -28,7 +25,6 @@ header{
   z-index: 2;
   gap:1%;   /*porcentagem para facilitar na responsividade, acredito eu */ /*era fake news, mas deixa assim*/
 }
-
 .logo{
     height: 90px;
     margin-left: 7px;
@@ -42,22 +38,14 @@ header{
     width: 200px;
     padding: 5px;
     font-weight: bold;
-   
-    
-  
 }
-
 .menu-header{
   
     list-style: none;
    margin-left: 1100px;
     display: flex;
     margin-top: 35px;
-    gap:20px;
-   
-  
-   
-    
+    gap:20px;  
 }
 .item-menu {
    
@@ -68,13 +56,10 @@ header{
     overflow: hidden;
     font-family: 'odor mean chey';
     color: var(--vermelhoescuro);
-   
     white-space: nowrap;
 }
 #login {
     font-size: 20px;
-    
-   
     text-decoration: none;
     padding: 2px;
     position: relative;
@@ -86,13 +71,15 @@ header{
 
 /* BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 
 BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1*/
+
 .titulocinetracks{
   display: flex;
   justify-content: center;
 }
 #Cine{
   background: linear-gradient(to right, #e4b23a, #f8d175,#e4b23a);
-  -webkit-background-clip: text;
+  /* IGNORE A LINHA AMARELA, ELA É UM AVISO, MAS NÃO INTERFERE EM NADA */
+  -webkit-background-clip: text;      
   -webkit-text-fill-color: transparent;
   font-family: 'norwester';
   font-size: 9rem;
@@ -107,10 +94,6 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
   font-size: 7rem;
   margin-top: 38px;
 }
-
-
-
-
 .container-cards{
   display: flex;
   justify-content: space-between;
@@ -120,10 +103,8 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
   margin-right: 40px;
 }
 .coluna-esquerda-cinetracks{
-  
   margin: 0 auto;
   justify-content: center;
-  
 }
 #card-quemsomos{
   justify-content: center;
@@ -133,9 +114,6 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
   width: 90%;
   margin-left: auto;
   padding-top: 10px;
-  
-  
-  
 }
 #card-contatos{
    justify-content: center;
@@ -146,8 +124,6 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
   padding-bottom: 28px;
  width: 90%;
  margin-left: auto;
- 
-
 }
 #titulo-contatos{
   font-size: 2.3rem;
@@ -163,7 +139,6 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
 }
 .coluna-direita-cinetracks{
   width: 9070px;
-
 }
 #card-nossoobjetivo{
   justify-content: center;
@@ -179,10 +154,7 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
   padding: 30px;
   margin-top: 50px;
   padding-top: 10px;
-
 }
-
-
 .texto{
   text-align: justify;
   color: #ffff;
@@ -217,15 +189,7 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
   background-color:#000;
   padding: 30px;
   width: 100%;
-
 }
-
-
-
-
-
-
-
 /* caixa de desenvolvedora */
 .card-desenvolvedora-esquerda{
   border-radius: 50px;
@@ -237,12 +201,9 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
    margin-top: 30px;
    max-width: 100%;
 }
-
 .coluna-esquerda-desenvolvedoras{
   margin-left: 20px;
-
 }
-
 .nome{
   font-family: 'bebas neue';
   color:#fff;
@@ -255,7 +216,6 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
   color:#ffffff82;
   text-align: center;
   margin-top: -4px;
-  
 }
 .redes{
   justify-content: center;
@@ -291,21 +251,7 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
   max-width: 100%;
   margin-top: 30px;
   margin-right: 10px;
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer{
   margin-top: 30px;
     background: #000;
@@ -338,13 +284,10 @@ footer{
   font-family: 'norwester';
 }
 #icones{
-  gap: 30px;
+  gap: 30px; 
+  /* depois arrumar o footer */
 }
 .icone{
     width: 32px;
-    margin-top: 12px;
-    margin-left: 30px;
-   
-    
-
+    margin-top: 12px;  
 }
