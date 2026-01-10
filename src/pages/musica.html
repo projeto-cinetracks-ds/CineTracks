@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" href="/src/assets/img/DW1.jpg" type="image/x-icon"> -->
+    <link rel="stylesheet" href="/src/css/musica.css">
+    <link href="https://fonts.cdnfonts.com/css/odor-mean-chey" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/norwester" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Questrial&display=swap');
+    </style>
+
+    <style>
+
+    </style>
+    <title>CineTracks</title>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="/src/assets/img/logopng.png" alt="logo" class="logo">
+        <input type="text" id="busca" placeholder="Pesquisar">
+        <nav>
+            <ul class="menu-header">
+                <li><a href="/index.html" class="item-menu">HOME</a></li>
+                <li><a href="/src/pages/sobrenos.html" class="item-menu">SOBRE NOS</a></li>
+                <li><a href="/src/pages/login.html" id="login">LOGIN</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburguer">
+            <span class="barra"></span>
+            <span class="barra"></span>
+            <span class="barra"></span>
+        </div>
+    </header>
+
+
+    <main> 
+        <!-- STRANGER THINGS -->
+        <section class="bloco-obra" data-obra="stranger-things"> <!--nesse bloco/section está o filme/album q foi clicado-->
+            <img src="/src/assets/img/strangerthings.jpg" alt="strangerthings" class="img-obra">
+            <div class="obra-conteudo">
+                <h5>Série</h5>
+                <h4>Stranger Things</h4>
+                <h6>N músicas</h6>
+            </div>
+        </section>
+
+        <article class="music-card" data-obra="stranger-things">  <!-- cada article representa uma musica -->
+            <img src="/src/assets/img/ST.temaIMG.jpeg" class="img-msc">
+            <div class="desc-msc">
+                <h4 class="music-title">Stranger Things</h4>
+                <h6>Kyle Dixon & Michael Stein</h6>
+            </div>
+
+            <audio src="/src/assets/audio/ST.tema.mpeg"></audio> <!--link do AUDIO-->
+
+            <div class="player hidden"> <!--aqui as funcionalidades de cada musica-->
+                <div> 
+                    <button class="prev">⏮</button>
+                    <button class="play-pause">⏸</button>
+                    <button class="next">⏭</button>
+                </div>
+                <div class="progress-container">
+                    <span class="current-time">0:00</span>
+                    <input type="range" class="progress" value="0">
+                    <span class="duration">0:53</span>
+                </div>
+            </div>
+
+            <div class="right-info"> <!--! nossa estrelinha q ainda não funciona -->
+                <button class="star-btn" aria-label="Favoritar">☆</button>
+            </div>
+        </article> <!--fim do article da musica-->
+
+        
+        <article class="music-card"  data-obra="stranger-things">  <!-- cada article representa uma musica -->
+            <img src="/src/assets/img/ST.runningIMG.png" class="img-msc">
+            <div class="desc-msc">
+                <h4 class="music-title">Running Up That Hill</h4>
+                <h6>Kate Bush</h6>
+            </div>
+
+            <audio src="/src/assets/audio/ST.running.mpeg"></audio> <!--link do AUDIO-->
+
+            <div class="player hidden"> <!--aqui as funcionalidades de cada musica-->
+                <div> 
+                    <button class="prev">⏮</button>
+                    <button class="play-pause">⏸</button>
+                    <button class="next">⏭</button>
+                </div>
+                <div class="progress-container">
+                    <span class="current-time">0:00</span>
+                    <input type="range" class="progress" value="0">
+                    <span class="duration">4:58</span>
+                </div>
+            </div>
+
+            <div class="right-info"> <!--! nossa estrelinha q ainda não funciona -->
+                <button class="star-btn" aria-label="Favoritar">☆</button>
+            </div>
+        </article> <!--fim do article da musica-->
+
+
+        <article class="music-card"  data-obra="stranger-things">  <!-- cada article representa uma musica -->
+            <img src="/src/assets/img/ST.shouldistayIMG.jpeg" class="img-msc">
+            <div class="desc-msc">
+                <h4 class="music-title">Should I Stay or Should I Go</h4>
+                <h6>The Clash</h6>
+            </div>
+
+            <audio src="/src/assets/audio/ST.shouldIstay.mpeg"></audio> <!--link do AUDIO-->
+
+            <div class="player hidden"> <!--aqui as funcionalidades de cada musica-->
+                <div> 
+                    <button class="prev">⏮</button>
+                    <button class="play-pause">⏸</button>
+                    <button class="next">⏭</button>
+                </div>
+                <div class="progress-container">
+                    <span class="current-time">0:00</span>
+                    <input type="range" class="progress" value="0">
+                    <span class="duration">3:09</span>
+                </div>
+            </div>
+
+            <div class="right-info"> <!--! nossa estrelinha q ainda não funciona -->
+                <button class="star-btn" aria-label="Favoritar">☆</button>
+            </div>
+        </article> <!--fim do article da musica-->
+
+         <article class="music-card"  data-obra="stranger-things">  <!-- cada article representa uma musica -->
+            <img src="/src/assets/img/ST.msctristeIMG.jpeg" class="img-msc">
+            <div class="desc-msc">
+                <h4 class="music-title">When It's Cold I'd Like To Die</h4>
+                <h6>Moby</h6>
+            </div>
+
+            <audio src="/src/assets/audio/ST.msctriste.mpeg"></audio> <!--link do AUDIO-->
+
+            <div class="player hidden"> <!--aqui as funcionalidades de cada musica-->
+                <div> 
+                    <button class="prev">⏮</button>
+                    <button class="play-pause">⏸</button>
+                    <button class="next">⏭</button>
+                </div>
+                <div class="progress-container">
+                    <span class="current-time">0:00</span>
+                    <input type="range" class="progress" value="0">
+                    <span class="duration">4:27</span>
+                </div>
+            </div>
+
+            <div class="right-info"> <!--! nossa estrelinha q ainda não funciona -->
+                <button class="star-btn" aria-label="Favoritar">☆</button>
+            </div>
+        </article> <!--fim do article da musica-->
+
+
+
+        <!-- TOP GUN -->
+          <section class="bloco-obra" data-obra="top-gun"> <!--nesse bloco/section está o filme/album q foi clicado-->
+            <img src="/src/assets/img/topgun.png" alt="topgun" class="img-obra">
+            <div class="obra-conteudo">
+                <h5>Filme</h5>
+                <h4>Top Gun</h4>
+                <h6>N músicas</h6>
+            </div>
+        </section>
+
+
+        <article class="music-card" data-obra="top-gun">  <!-- cada article representa uma musica -->
+            <img src="/src/assets/img/ST.msctristeIMG.jpeg" class="img-msc">
+            <div class="desc-msc">
+                <h4 class="music-title">ignora q eu tava testando</h4>
+                <h6>Moby</h6>
+            </div>
+
+            <audio src="/src/assets/audio/ST.msctriste.mpeg"></audio> <!--link do AUDIO-->
+
+            <div class="player hidden"> <!--aqui as funcionalidades de cada musica-->
+                <div> 
+                    <button class="prev">⏮</button>
+                    <button class="play-pause">⏸</button>
+                    <button class="next">⏭</button>
+                </div>
+                <div class="progress-container">
+                    <span class="current-time">0:00</span>
+                    <input type="range" class="progress" value="0">
+                    <span class="duration">4:27</span>
+                </div>
+            </div>
+
+            <div class="right-info"> <!--! nossa estrelinha q ainda não funciona -->
+                <button class="star-btn" aria-label="Favoritar">☆</button>
+            </div>
+        </article> <!--fim do article da musica-->
+
+
+
+
+    </main>
+
+
+
+    <script src="/src/js/musica.js"></script>
+</body>
+
+
+</html>
