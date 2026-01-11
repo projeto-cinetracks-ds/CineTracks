@@ -12,6 +12,21 @@ const obras = {
     titulo: "Top Gun",
     tipo: "Filme",
     imagem: "/src/assets/img/topgun.png"
+  },
+  "pantera-negra": {
+    titulo: "Pantera Negra",
+    tipo: "Filme",
+    imagem: "/src/assets/img/posterpanteranegra.jpg"
+  },
+  "sebeber-naocase":{
+    titulo: "Se Beber, Não Case",
+    tipo: "Filme",
+    imagem: "/src/assets/img/sebebernaocaseposter.jpg"
+  },
+  "velozes-furiosos": {
+    titulo:"Velozes e Furiosos: Desafio em Tóquio",
+    tipo:"Filme",
+    imagem:"/src/assets/img/velozesefuriosostokio.jpg"
   }
   // adicione mais obras aqui se precisar
 };
