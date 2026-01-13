@@ -220,6 +220,9 @@ footer{
         transform: translateX(-100%);
     }
 }
+
+/* RESPONSIVIDADE  */
+
 @media (max-width: 768px) {
   .header{
    background: var(--gradvermelho);

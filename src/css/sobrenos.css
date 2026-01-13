@@ -92,7 +92,7 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
   -webkit-text-fill-color: transparent;
   font-family: 'Etna';
   font-size: 7rem;
-  margin-top: 38px;
+  margin-top: 2.2%;
 }
 .container-cards{
   display: flex;
@@ -291,3 +291,133 @@ footer{
     width: 32px;
     margin-top: 12px;  
 }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .header{
+   background: var(--gradvermelho);
+  display: flex;
+  height: 30px;
+  width: 100%;
+  }
+  .logo{
+    height: 50px;
+    margin-left: 7px;
+    margin-top: 4px;
+  }
+    #Cine{
+  
+  font-size: 5rem;
+ margin-top: auto;
+ font-weight: 400;
+}
+#tracks{
+ 
+  font-size: 3rem;
+  margin-top:6.7% ;/*plmdds arrumar esse tracks, ele quebra mto*/
+}
+.texto{
+  
+  font-size: 0.9rem;
+  
+}
+.titulo-card{
+  margin-bottom: 5px;
+  font-size: 2rem;
+  font-weight:600;
+}
+
+
+
+
+
+
+
+.container-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: auto 0;
+  width: 100%;
+}
+ #card-quemsomos {
+        order: 1;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #card-nossoobjetivo {
+        order: 2;
+    }
+
+    #card-nossaidentidade {
+        order: 3;
+        margin: 0 auto;
+    }
+
+    #card-contatos {
+        order: 4;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .coluna-esquerda-cinetracks,
+    .coluna-direita-cinetracks {
+        display: contents;
+    }
+    .contatos-cinetracks{
+      width: 14%;
+    }
+    .icones-contatos-cinetracks{
+      gap:20px;
+    }
+
+
+    /* BLOCO 2 BLOCO 2 BLOCO 2 BLOCO 2 */
+    #titulodesenvolvedoras{
+ 
+  font-size: 3.6rem;
+  margin-top: 40px;
+}
+#card-otime{
+  
+  padding: 30px;
+  width: 90%;
+  margin-left: 28px;
+}
+    .container-desenvolvedoras{
+  display: flex;
+  gap:10px;
+  margin:auto 0;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.coluna-esquerda-desenvolvedoras,
+    .coluna-direita-desenvolvedoras{
+        display: contents;
+    }
+    .card-desenvolvedora-direita,
+    .card-desenvolvedora-esquerda{
+      margin: auto 0;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+  #esteh{
+    order:1;
+    margin-top: 20px;
+  }
+  #sophia{
+    order:2;
+  }
+  #berta{
+    order:3;
+  }
+  #nana{
+    order:4;
+  }
+  #mali{
+    order:5;
+  }
+
+
+
+  }
