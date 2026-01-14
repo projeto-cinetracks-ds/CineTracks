@@ -5,6 +5,7 @@
 }
 :root{
      --gradvermelho:linear-gradient(to right,#000000,#000,#620606,#EFDAA4);
+     --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
     --bege: #f6e0d2;
     --preto: #000000;
     --vermelho: #620606;
@@ -12,6 +13,8 @@
     --vermelhoescuro:#280404;
     --vermelhosemiescuro:#520909;
     --texturadourada:linear-gradient(to right,#e4b23a,#f8d175,#e4b23a);
+    --amareloheader:#EFDAA4;
+    --gradhamburguer:linear-gradient(to right,#2e0404,#4b0606,#610606);
 }
 body{
    background: linear-gradient(to bottom,#000,#000,#000,#000,#000,#000,#250303,#250303,#250303,#250303,#250303 ); 
@@ -19,17 +22,19 @@ body{
 header{
   background: var(--gradvermelho);
   display: flex;
-  height: 10%;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;   
   width: 100%;
-  text-align: center;
+  padding: 0 1rem;
   z-index: 2;
-  gap:1%;   /*porcentagem para facilitar na responsividade, acredito eu */ /*era fake news, mas deixa assim*/
 }
 .logo{
     height: 90px;
     margin-left: 7px;
     margin-top: 4px;
 }
+
 #busca{
     height: 25px;
     margin-top: 35px;
@@ -40,12 +45,10 @@ header{
     font-weight: bold;
 }
 .menu-header{
-  
-    list-style: none;
-   margin-left: 1100px;
-    display: flex;
-    margin-top: 35px;
-    gap:20px;  
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
 }
 .item-menu {
    
@@ -66,6 +69,23 @@ header{
     overflow: hidden;
     font-family: 'odor mean chey';
     color: var(--vermelhoescuro);
+}
+.hamburguer {
+   display: none;
+   cursor: pointer;
+   position: relative;
+   z-index: 999;
+   flex-direction: column;
+   gap: 6px;
+}
+
+/* Barras */
+.barra {
+   width: 30px;
+   height: 3px;
+   background-color: var(--bege);
+   border-radius: 10px;
+   transition: 0.4s;
 }
 
 
@@ -293,18 +313,61 @@ footer{
 }
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  .header{
-   background: var(--gradvermelho);
-  display: flex;
-  height: 30px;
-  width: 100%;
-  }
+
   .logo{
     height: 50px;
     margin-left: 7px;
     margin-top: 4px;
   }
-    #Cine{
+  header{
+    height: 60px;
+    background: var(--gradheaderpequeno);
+  }
+
+  /* MOSTRA O HAMBÚRGUER */
+  .hamburguer{
+    display: flex;
+  }
+
+  /* ESCONDE MENU DESKTOP */
+  .menu-header{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--gradhamburguer);
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+  }
+  .item-menu{
+    color: white;
+  }
+  #login{
+    color: white;
+
+  }
+
+  .menu-header.active{
+    display: flex;
+  }
+
+  /* animação */
+  .hamburguer.active .barra:first-child {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburguer.active .barra:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguer.active .barra:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+ 
+ #Cine{
   
   font-size: 5rem;
  margin-top: auto;
@@ -325,13 +388,6 @@ footer{
   font-size: 2rem;
   font-weight:600;
 }
-
-
-
-
-
-
-
 .container-cards{
   display: flex;
   flex-direction: column;
@@ -417,7 +473,7 @@ footer{
   #mali{
     order:5;
   }
+}
 
 
-
-  }
+  
