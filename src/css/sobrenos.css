@@ -325,9 +325,7 @@ footer{
   }
 
   /* MOSTRA O HAMBÚRGUER */
-  .hamburguer{
-    display: flex;
-  }
+ 
 
   /* ESCONDE MENU DESKTOP */
   .menu-header{
@@ -335,11 +333,12 @@ footer{
     position: absolute;
     top: 60px;
     right: 0;
-    background: var(--gradhamburguer);
+    background: black;
     width: 200px;
     flex-direction: column;
     padding: 1rem;
     margin: 0;
+    
   }
   .item-menu{
     color: white;
@@ -347,6 +346,9 @@ footer{
   #login{
     color: white;
 
+  }
+   .hamburguer{
+    display: flex;
   }
 
   .menu-header.active{

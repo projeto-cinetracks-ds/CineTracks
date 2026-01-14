@@ -5,6 +5,7 @@
 }
 :root{
     --gradvermelho:linear-gradient(to right,#000000,#000,#620606,#EFDAA4);
+      --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
     --bege: #f6e0d2;
     --preto: #0000;
     --vermelho: #620606;
@@ -25,13 +26,14 @@ body{
 }
 
 header{
-    background: var(--gradvermelho);
-    display: flex;
-    height: 100px;
-    width: 100%;
-    text-align: center;
-    z-index: 2;
-    gap:15px;
+ background: var(--gradvermelho);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;   
+  width: 100%;
+  padding: 0 1rem;
+  z-index: 2;/*porcentagem para facilitar na responsividade, acredito eu */ /*era fake news, mas deixa assim*/
 }
 .logo{
      max-height: 90px;
@@ -72,6 +74,24 @@ header{
     font-family: 'odor mean chey';
     color: var(--vermelhoescuro);
  }
+ .hamburguer {
+   display: none;
+   cursor: pointer;
+   position: relative;
+   z-index: 999;
+   flex-direction: column;
+   gap: 6px;
+}
+
+/* Barras */
+.barra {
+   width: 30px;
+   height: 3px;
+   background-color: var(--bege);
+   border-radius: 10px;
+   transition: 0.4s;
+}
+
  .conteudo{
     display: flex;
     justify-content: center;
@@ -156,13 +176,7 @@ footer{
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
-header{
-   background: var(--gradvermelho);
-  display: flex;
- height: 5%;
-  width: 100%;
-  }
-  .logo{
+ .logo{
     height: 50px;
     margin-left: 7px;
     margin-top: 4px;
@@ -171,6 +185,59 @@ header{
     max-height: 25px;
     margin-top: 20px;
 }
+ header{
+    height: 60px;
+    background: var(--gradheaderpequeno);
+  }
+
+  /* MOSTRA O HAMBÚRGUER */
+ 
+
+  /* ESCONDE MENU DESKTOP */
+  .menu-header{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: black;
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+      z-index: 8;
+  }
+  .item-menu{
+    color: white;
+  }
+  #login{
+    color: white;
+
+  }
+   .hamburguer{
+    display: flex;
+    /* margin-right: auto 0; */
+    z-index: 10;
+    
+  }
+
+  .menu-header.active{
+    display: flex;
+  }
+
+  /* animação */
+  .hamburguer.active .barra:first-child {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburguer.active .barra:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguer.active .barra:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+
     form{
         width: 80%;
         margin-bottom: 300px;

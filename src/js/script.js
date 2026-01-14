@@ -21,3 +21,53 @@ if (nome.includes(termo)) {
 
     });
 }
+// SCRIPT DO CARROSSEL-FILMES, NA RESPONSIVIDADE
+ (function () {
+  const mediaQuery = window.matchMedia("(max-width: 768px)");
+  let filmes;
+
+  function initMobileCarousel() {
+    if (!mediaQuery.matches) return;
+
+    filmes = document.querySelector(".filmes");
+    if (!filmes) return;
+  }
+
+  // FUNÇÕES GLOBAIS (para os botões)
+  window.scrollRight = function () {
+    if (!mediaQuery.matches || !filmes) return;
+
+    filmes.scrollLeft += 150;
+  };
+
+  window.scrollLeftBtn = function () {
+    if (!mediaQuery.matches || !filmes) return;
+
+    filmes.scrollLeft -= 150;
+  };
+
+  // inicializa quando a página carregar
+  window.addEventListener("load", initMobileCarousel);
+
+  // se mudar de tamanho (mobile ↔ desktop)
+  mediaQuery.addEventListener("change", () => {
+    filmes = mediaQuery.matches
+      ? document.querySelector(".filmes")
+      : null;
+  });
+})();
+// HAMBURGUER
+const hamburguer = document.querySelector('.hamburguer');
+const headerMenu = document.querySelector('.menu-header');
+
+function toggleMenu(){
+    hamburguer.classList.toggle('active');
+    headerMenu.classList.toggle('active');
+}
+
+hamburguer.addEventListener('click', toggleMenu);
+headerMenu.addEventListener('click', (event) => {
+    if (event.target.classList.contains('item-menu')) {
+        toggleMenu();
+    }
+});

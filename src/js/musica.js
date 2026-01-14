@@ -183,3 +183,18 @@ function formatTime(time) {
   const seconds = Math.floor(time % 60).toString().padStart(2, '0');
   return `${minutes}:${seconds}`;
 }
+// HAMBURGUER HAMBURGUER
+const hamburguer = document.querySelector('.hamburguer');
+const headerMenu = document.querySelector('.menu-header');
+
+function toggleMenu(){
+    hamburguer.classList.toggle('active');
+    headerMenu.classList.toggle('active');
+}
+
+hamburguer.addEventListener('click', toggleMenu);
+headerMenu.addEventListener('click', (event) => {
+    if (event.target.classList.contains('item-menu')) {
+        toggleMenu();
+    }
+});

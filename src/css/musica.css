@@ -7,9 +7,10 @@
 :root{
      --gradvermelho:linear-gradient(to right,#0000,#000,#620606,#EFDAA4);
      --gradescuro:linear-gradient(to right, #443824, #220202, #000, #220202, #443824);
+      --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
     --bege: #f6e0d2;
     --preto: #0000;
-    --vermelho: #620606;
+    --vermelho: #520909;
     --dourado: #e4b23a;
     --vermelhoescuro:#280404;
 }
@@ -18,17 +19,20 @@ body{
   touch-action: pan-y;  /*para não ver o fim do carrossel */
   overflow-x: hidden;  /*para não ver o fim do carrossel */
   overflow-y: auto;   /*para não ver o fim do carrossel */
+  flex-direction: column;   /*profooter colar na parte inferior da tela, odio ele fica subindo*/
+  display: flex;    /*profooter colar na parte inferior da tela, odio ele fica subindo*/
  
 }
 
 header{
-  background: var(--gradvermelho);
+ background: var(--gradvermelho);
   display: flex;
-  height: 10%;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;   
   width: 100%;
-  text-align: center;
-  z-index: 2;
-  gap:1%;   /*porcentagem para facilitar na responsividade, acredito eu */ /*era fake news, mas deixa assim*/
+  padding: 0 1rem;
+  z-index: 2;/*porcentagem para facilitar na responsividade, acredito eu */ /*era fake news, mas deixa assim*/
 }
 
 .logo{
@@ -80,7 +84,32 @@ header{
     font-family: 'odor mean chey';
     color: var(--vermelhoescuro);
 }
+.hamburguer {
+   display: none;
+   cursor: pointer;
+   position: relative;
+   z-index: 999;
+   flex-direction: column;
+   gap: 6px;
+}
+
+/* Barras */
+.barra {
+   width: 30px;
+   height: 3px;
+   background-color: var(--bege);
+   border-radius: 10px;
+   transition: 0.4s;
+}
 /* Aqui é o css da section do filme/album */
+main{
+   flex: 1;   /*profooter colar na parte inferior da tela, odio ele fica subindo*/
+}
+#page{
+   min-height: 100vh;       /* ocupa a tela inteira */
+  display: flex;
+  flex-direction: column;  /*GAMBIARRA PRO FOOTER TOCAR O CHÃO, SE ATRAPALHAR PODE TIRAR*/
+}
 .bloco-obra{
     display: flex;
     align-items: center;
@@ -113,20 +142,29 @@ header{
 /* aqui é o article da musica */
 .music-card {
   margin-top: 20px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   color: white;
   display: flex;
   gap: 20px;
   align-items: center;
-  position: relative;
+  position: relative;  
+  /* tirei p margin left para o hover funcionar melhor viu, mas é pura estética, ent se precisar pode voltar com ele */
+   transition: box-shadow 0.25s ease;
+}
+
+.music-card:hover {
+  box-shadow: 12px 12px 12px rgba(83, 0, 0, 0.35);
+   transform: translateY(-2px);
+   border: #240101;
 }
 .music-card h6{
-  color: gray;
+  color:0 0 10px gray;
 }
 /* imagem msc */
 .img-msc {
   height: 100px;
   border-radius: 50%;
+  margin-left: 5px;
 }
 /* descrição msc */
 .desc-msc {
@@ -223,4 +261,106 @@ header{
 }
 .star-btn.active {
   color: gold;
+}
+footer{
+  margin-top: 30px;
+    background: var(--vermelho);
+    display: flex;
+   min-height: 100px;
+    width: 100%;
+    text-align: center;
+    color: var(--bege);
+    justify-content: center;
+}
+.footer-container{
+  margin-top: 10px;
+}
+@font-face {
+  font-family: 'Etna';
+  src: url('../fonts/etna-free-font.otf') format('truetype');
+}
+#direitos-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+#copy{
+  font-family: 'open sans';
+}
+#tracks-footer{
+  font-family: 'Etna';
+}
+#cine-footer{
+  font-family: 'norwester';
+}
+#img-footer{
+  gap:17px;
+  display: flex;
+}
+.icone{
+    width: 40px;
+    margin-top: 12px;
+}
+@media (max-width: 768px) {
+  
+  
+  .logo{
+    height: 50px;
+    margin-left: 7px;
+    margin-top: 4px;
+}
+#busca{
+    max-height: 25px;
+    margin-top: 20px;
+}
+ header{
+    height: 60px;
+    background: var(--gradheaderpequeno);
+  }
+
+  /* MOSTRA O HAMBÚRGUER */
+ 
+
+  /* ESCONDE MENU DESKTOP */
+  .menu-header{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: black;
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+      z-index: 8;
+  }
+  .item-menu{
+    color: white;
+  }
+  #login{
+    color: white;
+
+  }
+   .hamburguer{
+    display: flex;
+    margin-right: auto 0;
+    
+  }
+
+  .menu-header.active{
+    display: flex;
+  }
+
+  /* animação */
+  .hamburguer.active .barra:first-child {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburguer.active .barra:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguer.active .barra:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+  }
 }

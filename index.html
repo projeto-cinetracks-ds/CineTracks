@@ -22,9 +22,11 @@
 
     <header>
 
+ <div class="uniao-logo-busca"> <!--ISSO É UMA GAMBIARRA DE GENIO, TRANSCENDI, ALASTREI, DIVEI (SERVE PARA DEIXAR O HEADER ORGANIZADO)-->
         <img src="./src/assets/img/logopng.png" alt="logo" class="logo">
 
         <input type="text" id="busca" placeholder="Pesquisar">
+ </div>
 
         <nav>
             <ul class="menu-header">
@@ -39,6 +41,7 @@
             <span class="barra"></span>
             <span class="barra"></span>
         </div>
+       
     </header>
 
 
@@ -116,7 +119,13 @@
 
             
             <h3 class="subtitulo-2">OBRAS EM ALTA</h3>
+              <div class="carrossel-filmes">
+
+            <button class="arrow left" onclick="scrollLeftBtn()">❮</button><!--carrossel da responsividade-->
+
             <div class="filmes">
+          
+                
 
                 <!-- testando a page de musica em ST, só pra ver se da certo -->
                 <article class="filme">
@@ -169,8 +178,14 @@
                     <a href="./src/pages/musica.html?obra=velozes-furiosos" class="nome-filme">Velozes e Furiosos: Desafio em Tóquio</a>
                     <p class="ano-lanc">2006</p>
                 </article>
+                </div>
 
-            </div>
+               <button class="arrow right" onclick="scrollRight()">❯</button>
+
+                 </div>
+
+           
+           
         </main>
 
         <footer>

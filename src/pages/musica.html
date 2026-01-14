@@ -43,7 +43,7 @@
         </div>
     </header>
 
-
+   <div id="page"> <!--GAMBIARRA PRO FOOTER TOCAR O CHÃO, SE ATRAPALHAR PODE TIRAR* -->
     <main> 
         <!-- STRANGER THINGS -->
         <section class="bloco-obra" data-obra="stranger-things"> <!--nesse bloco/section está o filme/album q foi clicado-->
@@ -166,6 +166,34 @@
         </article> <!--fim do article da musica-->
 
 
+        <article class="music-card"  data-obra="stranger-things">  <!-- cada article representa uma musica -->
+            <img src="/src/assets/img/ST.neverendingstory.jpg" class="img-msc">
+            <div class="desc-msc">
+                <h4 class="music-title">Never ending story</h4>
+                <h6>Moby</h6>
+            </div>
+
+            <audio src="/src/assets/audio/ST.neverendingstory.mp3"></audio> <!--link do AUDIO-->
+
+            <div class="player hidden"> <!--aqui as funcionalidades de cada musica-->
+                <div> 
+                    <button class="prev">⏮</button>
+                    <button class="play-pause">⏸</button>
+                    <button class="next">⏭</button>
+                </div>
+                <div class="progress-container">
+                    <span class="current-time">0:00</span>
+                    <input type="range" class="progress" value="0">
+                    <span class="duration">4:27</span>
+                </div>
+            </div>
+
+            <div class="right-info"> <!--! nossa estrelinha q ainda não funciona -->
+                <button class="star-btn" aria-label="Favoritar">☆</button>
+            </div>
+        </article> <!--fim do article da musica-->
+
+
 
         <!-- TOP GUN -->
           <section class="bloco-obra" data-obra="top-gun"> <!--nesse bloco/section está o filme/album q foi clicado-->
@@ -179,13 +207,13 @@
 
 
         <article class="music-card" data-obra="top-gun">  <!-- cada article representa uma musica -->
-            <img src="/src/assets/img/ST.msctristeIMG.jpeg" class="img-msc">
+            <img src="/src/assets/img/takemybreatheaway.jpg" class="img-msc">
             <div class="desc-msc">
-                <h4 class="music-title">ignora q eu tava testando</h4>
+                <h4 class="music-title">Take my breathe away</h4>
                 <h6>Moby</h6>
             </div>
 
-            <audio src="/src/assets/audio/ST.msctriste.mpeg"></audio> <!--link do AUDIO-->
+            <audio src="/src/assets/audio/TG.takemybreatheaway.mp3"></audio> <!--link do AUDIO-->
 
             <div class="player hidden"> <!--aqui as funcionalidades de cada musica-->
                 <div> 
@@ -372,7 +400,7 @@
                 <h6>USHER, Lil Jon, Ludacris</h6>
             </div>
 
-            <audio src="/src/assets/audio/SN.wholetthedogsout.mpeg"></audio> <!--link do AUDIO-->
+            <audio src="/src/assets/audio/SN.yeah.mpeg"></audio> <!--link do AUDIO-->
 
             <div class="player hidden"> <!--aqui as funcionalidades de cada musica-->
                 <div> 
@@ -459,8 +487,59 @@
         </article> <!--fim do article da musica-->
 
 
+        <article class="music-card" data-obra="velozes-furiosos">  <!-- cada article representa uma musica -->
+            <img src="/src/assets/img/sixdays.jpg" class="img-msc">
+            <div class="desc-msc">
+                <h4 class="music-title">Six days</h4>
+                <h6>Don Omar & Tego Calderón</h6>
+            </div>
+
+            <audio src="/src/assets/audio/VF.sixdays.mpeg.mp3"></audio> <!--link do AUDIO-->
+
+            <div class="player hidden"> <!--aqui as funcionalidades de cada musica-->
+                <div> 
+                    <button class="prev">⏮</button>
+                    <button class="play-pause">⏸</button>
+                    <button class="next">⏭</button>
+                </div>
+                <div class="progress-container">
+                    <span class="current-time">0:00</span>
+                    <input type="range" class="progress" value="0">
+                    <span class="duration">5:05</span>
+                </div>
+            </div>
+
+            <div class="right-info"> <!--! nossa estrelinha q ainda não funciona -->
+                <button class="star-btn" aria-label="Favoritar">☆</button>
+            </div>
+        </article> <!--fim do article da musica-->
+
+
 
     </main>
+     <footer>
+            <div class="footer-container">
+                <div id="img-footer">
+
+                <img src="../assets/img/instagramvermelho.png" alt="instagram" class="icone">
+                <img src="../assets/img/telefonevermelho.png" alt="telefone" class="icone">
+                <img src="../assets/img/xvermelho.png" alt="x" class="icone">
+                
+                </div>
+
+
+                <div id="direitos-footer">
+                    <p id="copy">&copy; 2025 - </p>
+                    <p id="cine-footer">Cine</p>
+                    <p id="tracks-footer">tracks</p>
+                </div>
+
+
+
+
+            </div>
+        </footer>
+        </div> <!--GAMBIARRA PRO FOOTER TOCAR O CHÃO, SE ATRAPALHAR PODE TIRAR* -->
 
 
 
