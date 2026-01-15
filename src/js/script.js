@@ -71,17 +71,56 @@ headerMenu.addEventListener('click', (event) => {
         toggleMenu();
     }
 });
-// JS DO DESCUBRA
-  const btn = document.querySelector('.dropdown-btn');
-  const menu = document.querySelector('.dropdown-menu');
+// JS DO DESCUBRA, FUNCIONAL PARA O MOBILE TBM
+document.addEventListener('DOMContentLoaded', () => {
 
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('ativo');
+  // Seleciona todos os botões DESCUBRA
+  document.querySelectorAll('.dropdown-btn').forEach(btn => {
+
+    btn.addEventListener('click', e => {
+      e.preventDefault();      // evita ação padrão
+      e.stopPropagation();     // evita que o clique feche o menu pai
+
+      const menu = btn.nextElementSibling; // pega o dropdown-menu
+
+      // Toggle: se estiver aberto fecha, se fechado abre
+      menu.classList.toggle('ativo');
+    });
   });
 
-  // fechar ao clicar fora
-  document.addEventListener('click', (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+  // Fecha dropdown se clicar fora dele
+  document.addEventListener('click', e => {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
       menu.classList.remove('ativo');
-    }
+    });
   });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

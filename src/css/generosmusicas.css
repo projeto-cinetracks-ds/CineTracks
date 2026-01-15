@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{
-     --gradvermelho:linear-gradient(to right,#000000,#000,#620606,#EFDAA4);
+    --gradvermelho:linear-gradient(to right,#000000,#000,#620606,#f0c68b,#EFDAA4);
      --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
     --bege: #f6e0d2;
     --preto: #000000;
@@ -26,13 +26,12 @@ header{
   justify-content: space-between;
   height: 90px;   
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 24px;
   z-index: 2;
 }
 .logo{
-    height: 90px;
-    margin-left: 7px;
-    margin-top: 4px;
+ height: 90px;
+    margin-top: 15px;
 }
 
 #busca{
@@ -99,7 +98,6 @@ header{
    
     text-decoration: none;
     font-size: 20px;
-    padding: 2px;
     position: relative;
     overflow: hidden;
     font-family: 'odor mean chey';
@@ -260,3 +258,82 @@ footer{
     width: 40px;
     margin-top: 12px;
 }
+@media (max-width: 768px) {
+  
+  
+  .logo{
+    height: 50px;
+    margin-left: 7px;
+    margin-top: 4px;
+}
+#busca{
+    max-height: 20px;
+    margin-top: 20px;
+    margin-right: 160px;
+    
+
+}
+ header{
+    height: 60px;
+    background: var(--gradheaderpequeno);
+  }
+  /* MOSTRA O HAMBÚRGUER */
+ 
+
+  /* ESCONDE MENU DESKTOP */
+  .menu-header{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: black;
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+      z-index: 9;
+ 
+      
+  }
+  .item-menu{
+    color: white;
+  }
+  #login{
+    color: white;
+
+  }
+  .seta{
+    z-index: 8;
+  }
+   .hamburguer{
+    display: flex;
+    margin-right: auto 0;
+    
+  }
+
+  .menu-header.active{
+    display: flex;
+  }
+
+  /* animação */
+  .hamburguer.active .barra:first-child {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburguer.active .barra:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguer.active .barra:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .dropdown-menu {
+    position: static; /* fica dentro do menu */
+    display: none;
+  }
+
+  .dropdown-menu.ativo {
+    display: flex; /* abre ao clicar */
+  }
+}
+

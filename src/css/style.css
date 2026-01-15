@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root{
-     --gradvermelho:linear-gradient(to right,#0000,#000,#620606,#EFDAA4);
+     --gradvermelho:linear-gradient(to right,#0000,#000,#620606,#f0c68b,#EFDAA4);
       --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
     --bege: #f6e0d2;
     --preto: #0000;
@@ -35,18 +35,18 @@ header{
   justify-content:space-between;
   height: 90px;   
   width: 100%;
-  padding: 0 1rem;
   z-index: 2;/*porcentagem para facilitar na responsividade, acredito eu */ /*era fake news, mas deixa assim*/
+  padding: 0 24px;
 }
 .uniao-logo-busca{
   gap:30px;
   display: flex;
+  align-items: center;
 }
 
 .logo{
-    height: 90px;
-    margin-left: 7px;
-    margin-top: 4px;
+   height: 90px;
+    margin-top: 15px;
 }
 #busca{
     height: 25px;
@@ -60,24 +60,16 @@ header{
 }
 
 .menu-header{
-  
-    list-style: none;
-    margin-right: auto 0;
-    display: flex;
-    margin-top: 28px;
-    gap:17px;
-   
-    
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
 }
 .dropdown-btn {
   cursor: pointer;
     background: none;
   border: none;
   outline: none;
-  text-decoration: none;
-    font-size: 20px;
-      font-family: 'odor mean chey';
-    color: var(--vermelhoescuro);
 }
 
 /* menu escondido */
@@ -117,12 +109,10 @@ header{
    
     text-decoration: none;
     font-size: 20px;
-    padding: 2px;
     position: relative;
     overflow: hidden;
     font-family: 'odor mean chey';
     color: var(--vermelhoescuro);
-    
     white-space: nowrap;
 }
 #login {
@@ -388,6 +378,15 @@ footer{
   .hamburguer.active .barra:last-child {
     transform: translateY(-9px) rotate(-45deg);
   }
+  .dropdown-menu {
+    position: static; /* fica dentro do menu */
+    display: none;
+  }
+
+  .dropdown-menu.ativo {
+    display: flex; /* abre ao clicar */
+  }
+
 
 .msc img{
     margin: 5px;

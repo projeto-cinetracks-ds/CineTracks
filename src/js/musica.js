@@ -109,28 +109,30 @@ cards.forEach((card, index) => {
 
   // ▶️ Tocar música
   function playMusic() {
-    // se outra música estiver ativa
-    if (currentCard && currentCard !== card) {
-      const prevAudio = currentCard.querySelector('audio');
-      const prevPlayer = currentCard.querySelector('.player');
-      const prevBtn = currentCard.querySelector('.play-pause');
+  // se outra música estiver ativa
+  if (currentCard && currentCard !== card) {
+    const prevAudio = currentCard.querySelector('audio');
+    const prevPlayer = currentCard.querySelector('.player');
+    const prevBtn = currentCard.querySelector('.play-pause');
 
-      prevAudio.pause();
-      prevAudio.currentTime = 0;
-      prevBtn.textContent = '▶';
-      prevBtn.classList.remove('active');
-      prevPlayer.classList.add('hidden');
-    }
-
-    audio.play();
-    playPauseBtn.textContent = '⏸';
-    playPauseBtn.classList.remove('active');
-    player.classList.remove('hidden');
-
-    currentCard = card;
-    currentAudio = audio;
-    currentIndex = index;
+    prevAudio.pause();
+    prevAudio.currentTime = 0;
+    prevBtn.textContent = '▶';
+    prevBtn.classList.remove('active');
+    prevPlayer.classList.add('hidden'); // esconde player
+    prevPlayer.classList.remove('active'); // remove classe de exibição
   }
+
+  audio.play();
+  playPauseBtn.textContent = '⏸';
+  playPauseBtn.classList.add('active');     // marca botão ativo
+  player.classList.remove('hidden');        // remove hidden
+  player.classList.add('active');           // mostra player
+  currentCard = card;
+  currentAudio = audio;
+  currentIndex = index;
+}
+  
 
   // 👉 clicar no nome
   title.addEventListener('click', playMusic);
@@ -183,6 +185,7 @@ function formatTime(time) {
   const seconds = Math.floor(time % 60).toString().padStart(2, '0');
   return `${minutes}:${seconds}`;
 }
+
 // HAMBURGUER HAMBURGUER
 const hamburguer = document.querySelector('.hamburguer');
 const headerMenu = document.querySelector('.menu-header');
@@ -198,17 +201,51 @@ headerMenu.addEventListener('click', (event) => {
         toggleMenu();
     }
 });
-// JS DO DESCUBRA
-  const btn = document.querySelector('.dropdown-btn');
-  const menu = document.querySelector('.dropdown-menu');
 
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('ativo');
+// JS DO DESCUBRA, FUNCIONAL PARA O MOBILE TBM
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Seleciona todos os botões DESCUBRA
+  document.querySelectorAll('.dropdown-btn').forEach(btn => {
+
+    btn.addEventListener('click', e => {
+      e.preventDefault();      // evita ação padrão
+      e.stopPropagation();     // evita que o clique feche o menu pai
+
+      const menu = btn.nextElementSibling; // pega o dropdown-menu
+
+      // Toggle: se estiver aberto fecha, se fechado abre
+      menu.classList.toggle('ativo');
+    });
   });
 
-  // fechar ao clicar fora
-  document.addEventListener('click', (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+  // Fecha dropdown se clicar fora dele
+  document.addEventListener('click', e => {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
       menu.classList.remove('ativo');
-    }
+    });
   });
+
+});
+
+
+
+// JS PARA TOCAR MUSICA NA RESPONSIVIDADE
+document.querySelectorAll(".music-card").forEach(card => {
+  card.querySelector(".desc-msc").addEventListener("click", () => {
+    card.classList.toggle("active");
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+

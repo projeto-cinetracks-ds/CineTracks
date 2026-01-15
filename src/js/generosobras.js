@@ -1,3 +1,5 @@
+// JS DE IR PRO LADO
+
 document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.uniao-titulo-carreira').forEach(carreira => {
@@ -8,7 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!lista || !btnDireita || !btnEsquerda) return;
 
-    const passo = 100;
+    // Passo proporcional à largura visível da lista (80%)
+    function getPasso() {
+      return lista.clientWidth * 0.8;
+    }
 
     function atualizarSetas() {
       const maxScroll = lista.scrollWidth - lista.clientWidth;
@@ -18,30 +23,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     btnDireita.addEventListener('click', () => {
-      lista.scrollLeft += passo;
+      lista.scrollBy({ 
+        left: getPasso(), 
+        behavior: 'smooth' 
+      });
     });
 
     btnEsquerda.addEventListener('click', () => {
-      lista.scrollLeft -= passo;
+      lista.scrollBy({ 
+        left: -getPasso(), 
+        behavior: 'smooth' 
+      });
     });
 
+    // Atualiza setas quando o usuário scrolla manualmente
     lista.addEventListener('scroll', atualizarSetas);
 
-    atualizarSetas(); // estado inicial
+    // Estado inicial das setas
+    atualizarSetas();
   });
 
 });
-// JS DO DESCUBRA
-  const btn = document.querySelector('.dropdown-btn');
-  const menu = document.querySelector('.dropdown-menu');
 
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('ativo');
+
+
+
+
+
+// JS DO DESCUBRA, FUNCIONAL PARA O MOBILE TBM
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Seleciona todos os botões DESCUBRA
+  document.querySelectorAll('.dropdown-btn').forEach(btn => {
+
+    btn.addEventListener('click', e => {
+      e.preventDefault();      // evita ação padrão
+      e.stopPropagation();     // evita que o clique feche o menu pai
+
+      const menu = btn.nextElementSibling; // pega o dropdown-menu
+
+      // Toggle: se estiver aberto fecha, se fechado abre
+      menu.classList.toggle('ativo');
+    });
   });
 
-  // fechar ao clicar fora
-  document.addEventListener('click', (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
+  // Fecha dropdown se clicar fora dele
+  document.addEventListener('click', e => {
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
       menu.classList.remove('ativo');
-    }
+    });
   });
+
+});
+  // HAMBURGUER
+const hamburguer = document.querySelector('.hamburguer');
+const headerMenu = document.querySelector('.menu-header');
+
+function toggleMenu(){
+    hamburguer.classList.toggle('active');
+    headerMenu.classList.toggle('active');
+}
+
+hamburguer.addEventListener('click', toggleMenu);
+headerMenu.addEventListener('click', (event) => {
+    if (event.target.classList.contains('item-menu')) {
+        toggleMenu();
+    }
+});

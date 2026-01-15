@@ -5,8 +5,9 @@
      font-family:'Open Sans' ;
 }
 :root{
-     --gradvermelho:linear-gradient(to right,#0000,#000,#620606,#EFDAA4);
+    --gradvermelho:linear-gradient(to right,#000000,#000,#620606,#f0c68b,#EFDAA4);
      --gradescuro:linear-gradient(to right, #443824, #220202, #000, #220202, #443824);
+     --gradescuropequeno:linear-gradient(to right, #332917, #190202, #000, #190202, #332917);
       --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
     --bege: #f6e0d2;
     --preto: #0000;
@@ -31,14 +32,13 @@ header{
   justify-content: space-between;
   height: 90px;   
   width: 100%;
-  padding: 0 1rem;
+ padding: 0 24px;
   z-index: 2;/*porcentagem para facilitar na responsividade, acredito eu */ /*era fake news, mas deixa assim*/
 }
 
 .logo{
-    height: 90px;
-    margin-left: 7px;
-    margin-top: 4px;
+  height: 90px;
+    margin-top: 15px;
 }
 #busca{
     height: 25px;
@@ -111,7 +111,6 @@ header{
    
     text-decoration: none;
     font-size: 20px;
-    padding: 2px;
     position: relative;
     overflow: hidden;
     font-family: 'odor mean chey';
@@ -184,6 +183,7 @@ main{
 }
 .obra-conteudo h6{
     font-weight: lighter;
+
 }
 
 
@@ -206,7 +206,7 @@ main{
    border: #240101;
 }
 .music-card h6{
-  color:0 0 10px gray;
+  color:gray;
 }
 /* imagem msc */
 .img-msc {
@@ -411,4 +411,81 @@ footer{
   .hamburguer.active .barra:last-child {
     transform: translateY(-9px) rotate(-45deg);
   }
+  .dropdown-menu {
+    position: static; /* fica dentro do menu */
+    display: none;
+  }
+
+  .dropdown-menu.ativo {
+    display: flex; /* abre ao clicar */
+  }
+  .bloco-obra{
+    background: var(--gradescuropequeno);
+  }
+   
+
+
+
+
+.music-card {
+  min-height: 180px; /* aumenta altura mínima do card */
+  padding: 50px 20px;
+  display: flex;
+  align-items: center; 
+  gap: 20px;
+}
+.desc-msc {
+  text-align: center; 
+   align-self: flex-start;
+}
+.desc-msc h3,
+.desc-msc p {
+  margin: 0;
+}
+.uniao-texto-play{
+ display: flex;
+  flex-direction: column;   /* empilha um em cima do outro */
+  align-items: center;      /* centraliza horizontalmente */
+  gap: 2rem;  
+   margin-left: 5rem;         
+}
+.player button {
+  width: 30px;
+  margin: 0;
+  height: 30px;
+  background: none;
+ border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border 0.2s ease; 
+}
+.player {
+  flex-direction: column; /* botões em cima, tempo embaixo */
+  align-items: center;
+  gap: 0;
+   width: 140px;             /* tamanho do player */
+   position: relative;
+  align-self: flex-start;
+  margin-top: 10px;
+  height: 30px;              /* espaço fixo reservado */
+  opacity: 0;                /* invisível */
+  pointer-events: none;     /* não clicável */
+  transition: opacity 0.25s ease;
+  display: flex;
+}
+.music-card.active .player {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.player .prev{
+  position: relative;
+  right: 50px;
+}
+.player .next{
+  position: relative;
+  left: 50px;
+}
 }
