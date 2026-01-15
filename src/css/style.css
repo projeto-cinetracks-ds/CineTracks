@@ -57,9 +57,6 @@ header{
     padding: 5px;
     font-weight: bold;
     margin-right: 200px;
-   
-    
-  
 }
 
 .menu-header{
@@ -71,6 +68,50 @@ header{
     gap:17px;
    
     
+}
+.dropdown-btn {
+  cursor: pointer;
+    background: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+    font-size: 20px;
+      font-family: 'odor mean chey';
+    color: var(--vermelhoescuro);
+}
+
+/* menu escondido */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background:#000;
+  border-radius: 8px;
+  padding: 10px 0;
+  display: none;
+  flex-direction: column;
+  min-width: 140px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* links */
+.dropdown-menu a {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-family: 'odor mean chey';
+}
+
+.dropdown-menu a:hover {
+  background: #222;
+}
+
+/* container */
+.dropdown {
+  position: relative;
+}
+.dropdown-menu.ativo {
+  display: flex;
 }
 .item-menu {
    
@@ -91,9 +132,6 @@ header{
     position: relative;
     overflow: hidden;
     font-family: 'odor mean chey';
-   
-
-
       background-color:#000; /* fundo da caixa */
   color: #EFDAA4;                         /* cor do texto */
   padding: 5px 10px;                   /* espaço interno */
@@ -257,12 +295,13 @@ footer{
 #cine-footer{
   font-family: 'norwester';
 }
-
+#img-footer{
+  gap:17px;
+  display: flex;
+}
 .icone{
-    width: 75px;
+    width: 40px;
     margin-top: 12px;
-    
-
 }
 
  @keyframes efeito1 {
