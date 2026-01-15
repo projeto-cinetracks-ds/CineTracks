@@ -26,13 +26,21 @@
 <body>
 
     <header>
+
         <img src="/src/assets/img/logopng.png" alt="logo" class="logo">
-        <input type="text" id="busca" placeholder="Pesquisar">
         <nav>
             <ul class="menu-header">
                 <li><a href="/index.html" class="item-menu">HOME</a></li>
-                <li><a href="/src/pages/sobrenos.html" class="item-menu">SOBRE NOS</a></li>
-                <li><a href="/src/pages/login.html" id="login">LOGIN</a></li>
+                 <div class="dropdown">
+              <button class="dropdown-btn" class="item-menu"> DESCUBRA</button>
+
+              <div class="dropdown-menu">
+            <a href="../pages/generosmusicas.html">MUSICAS</a>
+            <a href="../pages/generosobras.html">OBRAS</a>
+            </div>
+            </div>
+                <li><a href="./sobrenos.html" class="item-menu">SOBRE NOS</a></li>
+                <li><a href="./login.html" id="login">LOGIN</a></li>
             </ul>
         </nav>
 
