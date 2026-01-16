@@ -46,7 +46,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// js da barra de pesquisa (não ta 100% ainda)
+document.getElementById("busca").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        pesquisarFilmes();
+    }
+});
 
+function pesquisarFilmes() {
+    const termo = document.getElementById("busca").value.toLowerCase();
+    const filmes = document.querySelectorAll(".obra");
+
+
+    filmes.forEach(obra => {
+        const nome = obra.querySelector(".nome-obra").textContent.toLowerCase();
+if (nome.includes(termo)) {
+    obra.style.display = "flex";
+    obra.style.flexDirection = "column";
+} else {
+    obra.style.display = "none";
+}
+
+    });
+}
 
 
 

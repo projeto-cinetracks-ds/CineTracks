@@ -29,11 +29,16 @@ header{
   padding: 0 24px;
   z-index: 2;
 }
-.logo{
- height: 90px;
-    margin-top: 15px;
+.uniao-logo-busca{
+  gap:30px;
+  display: flex;
+  align-items: center;
 }
 
+.logo{
+   height: 90px;
+    margin-top: 15px;
+}
 #busca{
     height: 25px;
     margin-top: 35px;
@@ -42,6 +47,7 @@ header{
     width: 200px;
     padding: 5px;
     font-weight: bold;
+    margin-right: 200px;
 }
 .menu-header{
   list-style: none;

@@ -31,6 +31,26 @@ const obras = {
   // adicione mais obras aqui se precisar
 };
 
+function stopAllAudios() {
+  const audios = document.querySelectorAll('audio');
+  const buttons = document.querySelectorAll('.play-pause');
+  const cards = document.querySelectorAll('.music-card');
+
+  audios.forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
+
+  buttons.forEach(btn => {
+    btn.textContent = '▶';
+    btn.classList.remove('active');
+  });
+
+  cards.forEach(card => {
+    card.classList.remove('playing');
+  });
+}
+
 // ========================================
 // 1️⃣ PEGA O PARÂMETRO DA URL
 const params = new URLSearchParams(window.location.search);
@@ -133,7 +153,7 @@ cards.forEach((card, index) => {
   currentIndex = index;
 }
   
-
+// CODIGO CERTOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
   // 👉 clicar no nome
   title.addEventListener('click', playMusic);
 
@@ -239,6 +259,44 @@ document.querySelectorAll(".music-card").forEach(card => {
 
 
 
+// const params = new URLSearchParams(window.location.search);
+// const params = new URLSearchParams(window.location.search);
+const musicToPlay = params.get('play');
+
+if (musicToPlay) {
+  const audio = document.getElementById(musicToPlay);
+
+  if (audio) {
+    const card = audio.closest('.music-card');
+    const button = card.querySelector('.play-pause');
+    const player = card.querySelector('.player');
+
+    // mostra o player
+    player.classList.remove('hidden');
+    button.classList.remove('hidden');
+
+    // garante que nenhuma outra esteja tocando
+if (currentAudio && currentAudio !== audio) {
+  currentAudio.pause();
+  currentAudio.currentTime = 0;
+}
+
+    // toca a música
+    audio.play();
+
+
+    currentAudio = audio;
+currentCard = card;
+currentIndex = [...cards].indexOf(card);
+
+    // estado visual correto
+    button.textContent = '⏸';
+    button.classList.add('active');
+
+    // opcional: marca o card como tocando
+    card.classList.add('playing');
+  }
+}
 
 
 
