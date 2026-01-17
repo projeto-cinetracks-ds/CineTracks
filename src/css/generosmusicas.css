@@ -8,7 +8,7 @@
      --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
     --bege: #f6e0d2;
     --preto: #000000;
-    --vermelho: #620606;
+    --vermelho: #520909;
     --dourado: #e4b23a;
     --vermelhoescuro:#280404;
     --vermelhosemiescuro:#520909;
@@ -142,7 +142,6 @@ header{
 }
 main{
     padding: 10px;
-    gap:60px;
     display: flex;
     flex-direction: column;
 }
@@ -166,9 +165,9 @@ main{
 .lista-musicas{
   display: flex;
   gap: 40px;
-  align-items: center;
- 
    overflow-x: hidden;  
+   height: 180px;
+ 
 }
 .seta{
   position: absolute;
@@ -215,7 +214,16 @@ main{
 .nome-musica{
     color:#fff;
     font-family: 'open sans';
-    font-weight: 600;
+    font-weight: 600;  
+    text-align: center;
+    font-size:14px ;
+}
+.nome-grande{
+  max-width: 150px;
+  font-size:14px ;
+}
+a{
+  text-decoration: none;
 }
 
 

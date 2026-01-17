@@ -27,6 +27,17 @@ const obras = {
     titulo:"Velozes e Furiosos: Desafio em Tóquio",
     tipo:"Filme",
     imagem:"/src/assets/img/velozesefuriosostokio.jpg"
+  },
+  "aranhaverso":{
+    titulo:"Homem aranha no Aranhaverso",
+    tipo:"filme",
+    imagem:"/src/assets/img/aranhaversoposter.jpg"
+
+  },
+  "barbie":{
+    titulo:"barbie",
+    tipo:"filme",
+    imagem:"/src/assets/img/comedia.barbie.jpg"
   }
   // adicione mais obras aqui se precisar
 };

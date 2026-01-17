@@ -8,7 +8,7 @@
      --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
     --bege: #f6e0d2;
     --preto: #000000;
-    --vermelho: #620606;
+    --vermelho: #520909;
     --dourado: #e4b23a;
     --vermelhoescuro:#280404;
     --vermelhosemiescuro:#520909;
@@ -140,17 +140,17 @@ header{
    transition: 0.4s;
 }
 main{
-    padding: 30px;
-    gap:60px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
+     padding-top: 20px;
 }
 .titulo{
     color:white;
      font-size: 1.4rem;
     font-family: 'odor mean chey';
     font-weight: 100;
-    margin-left: 10px;
+    margin-left: 30px;
     
 }
 .uniao-titulo-carreira{
@@ -161,13 +161,15 @@ main{
     display: flex;
     gap:40px;
      position: relative;
+     height: 300px;
 }
 .lista-musicas{
   display: flex;
   gap: 60px;
   align-items: center;
- 
    overflow-x: hidden;  
+   padding-left: 20px;
+  padding-right: 20px;
 }
 .seta{
   position: absolute;
@@ -201,9 +203,57 @@ main{
      display: flex;
   flex-direction: column;
    align-items: center;
-    
-    
+
+
+
 }
+.adrenalina {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.adrenalina:hover{
+  box-shadow: 0 0 30px rgba(255, 51, 0, 0.9);
+  transform: scale(1.03);
+}
+
+.comedia {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.comedia:hover{
+  box-shadow: 0 0 30px rgba(255, 213, 28, 0.9);
+  transform: scale(1.03);
+}
+
+.heroicos {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.heroicos:hover{
+  box-shadow: 0 0 30px rgba(30, 0, 255, 0.9);
+  transform: scale(1.03);
+}
+
+.terror {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.terror:hover{
+  box-shadow: 0 0 50px rgba(105, 0, 0, 1);
+  transform: scale(1.03);
+}
+.barra{
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.barbie:hover{
+  box-shadow: 0 0 30px rgba(255, 0, 157, 0.8);
+  transform: scale(1.03);
+}
+
+
+
+
+
+
+
+
+
 .img{
     width: 144px;       /* ou 70px, 100px */
   height: 200px;

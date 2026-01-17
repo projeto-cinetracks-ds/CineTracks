@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Passo proporcional à largura visível da lista (80%)
     function getPasso() {
-      return lista.clientWidth * 0.8;
+      return lista.clientWidth * 0.3;
     }
 
     function atualizarSetas() {

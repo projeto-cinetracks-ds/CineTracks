@@ -9,6 +9,8 @@
      --gradescuro:linear-gradient(to right, #443824, #220202, #000, #220202, #443824);
      --gradescuropequeno:linear-gradient(to right, #332917, #190202, #000, #190202, #332917);
       --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
+      --gradbarbie:linear-gradient(to right, #442432, #220211, #000, #220211, #442432);
+       --gradescuropequenobarbie:linear-gradient(to right,  #220211, #1b010d, #000,  #1b010d,  #220211);
     --bege: #f6e0d2;
     --preto: #0000;
     --vermelho: #520909;
@@ -168,6 +170,17 @@ main{
     background: var(--gradescuro);
     height: 250px;
 }
+.bloco-obra-barbie{
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 25px;
+    background: var(--gradbarbie);
+    height: 250px;
+}
 .img-obra{
     margin-left: 20px;
     height: 220px;
@@ -190,7 +203,7 @@ main{
 /* aqui é o article da musica */
 .music-card {
   margin-top: 20px;
-  /* margin-left: 20px; */
+  margin-left: 20px;
   color: white;
   display: flex;
   gap: 20px;
@@ -198,12 +211,21 @@ main{
   position: relative;  
   /* tirei p margin left para o hover funcionar melhor viu, mas é pura estética, ent se precisar pode voltar com ele */
    transition: box-shadow 0.25s ease;
+   
 }
 
 .music-card:hover {
   box-shadow: 12px 12px 12px rgba(83, 0, 0, 0.35);
    transform: translateY(-2px);
    border: #240101;
+}
+.music-card-barbie{
+    transition: box-shadow 0.25s ease;
+}
+.music-card-barbie:hover {
+  box-shadow: 12px 12px 12px rgba(83, 0, 59, 0.35);
+   transform: translateY(-2px);
+   border: #240117;
 }
 .music-card h6{
   color:gray;
@@ -420,7 +442,7 @@ footer{
     display: flex; /* abre ao clicar */
   }
   .bloco-obra{
-    background: var(--gradescuropequeno);
+    background: var(--gradescuropequenobarbie);
   }
    
 
@@ -433,6 +455,7 @@ footer{
   display: flex;
   align-items: center; 
   gap: 20px;
+  margin:auto;
 }
 .desc-msc {
   text-align: center; 

@@ -8,15 +8,15 @@
       --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
     --bege: #f6e0d2;
     --preto: #0000;
-    --vermelho: #620606;
+    --vermelho: #520909;
     --dourado: #e4b23a;
     --vermelhoescuro:#280404;
 }
 body{
   background-color: black;
-  touch-action: pan-y;  /*para não ver o fim do carrossel */
-  overflow-x: hidden;  /*para não ver o fim do carrossel */
-  overflow-y: auto;   /*para não ver o fim do carrossel */
+  /* touch-action: pan-y; 
+  overflow-x: hidden; 
+  overflow-y: auto;    */
  
 }
   .wrapper {
@@ -174,13 +174,8 @@ header{
      transition: 3s;   
 }
 .msc img:hover{
-    transform: scale(1.02);
+    transform: scale(1.06);
     transition: 0.3s;
-    border: solid 2px;
-    border-color: #ffcc0080;  /* muda a borda para rosa */
-    box-shadow: 0 0 10px rgba(255, 199, 96, 0.523),
-                0 0 20px rgba(255, 199, 96, 0.484),
-                0 0 30px rgba(255, 199, 96, 0.252);
 }
 .subtitulo-2{
      color:var(--bege);
@@ -190,6 +185,11 @@ header{
     font-family: "odor mean chey";
     font-weight: 100;
 
+}
+.uniao-imagem-nome-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .carrossel-filmes {
   position: relative;
@@ -210,11 +210,14 @@ header{
 }
 .filmes{
    display: flex;
-   margin: 30px;
    margin-top: 30px;
-   margin-left: -5px;
-     overflow-x: hidden; /* ESCONDE o excesso */
-  scroll-behavior: smooth;
+     /* overflow-x: hidden; 
+  scroll-behavior: smooth; */
+  gap: 60px;
+  justify-content: space-evenly;
+  margin-left: 30px;
+ 
+  
 }
 .filmes::-webkit-scrollbar {
   display: none;
@@ -222,14 +225,14 @@ header{
 .filme {
     display: flex;
     flex-direction: column;
-    margin-right: 20px;   /* distancia entre os cards */
+    /* margin-right: 20px;   distancia entre os cards */
 }
 
 .filme img{
     width: 180px;
     margin: 5px;
-    height: 260px;
-    margin-left: 43px;
+    height: 270px;
+ 
 }
 .filme img:hover{
      transform: scale(1.02);
@@ -238,17 +241,19 @@ header{
 .nome-filme{
     font-size: 16px;
     text-decoration: none;
-    margin-left: 27px;
     color: var(--bege);
     font-weight: bold; 
     text-align: center;
     font-family: 'open sans';
    
 }
+#velozes{
+   font-size: 16px;
+  max-width: 150px;
+}
 .ano-lanc{
       font-size: 0.9rem;
     text-decoration: none;
-    margin-left: 118px;
     color: var(--bege);
     font-weight: bold; 
     font-family: 'open sans';
@@ -304,10 +309,29 @@ footer{
 }
 
 /* RESPONSIVIDADE  */
+/* responnsividade para as setas aparecerem assim que o primeiro filme sair de tela, muito capricho */
+@media (max-width: 1388px) { 
+  .carrossel-filmes{
+  position: relative;
+}
+.arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .left { left: 5px; }
+  .right { right: 5px; }
+
+
+}
 
 @media (max-width: 768px) {
-  
-  
+  main{
+    /* margin-top: 100px; */
+    flex:1;
+  }
   .logo{
     height: 50px;
     margin-left: 7px;
@@ -386,11 +410,12 @@ footer{
   .dropdown-menu.ativo {
     display: flex; /* abre ao clicar */
   }
-
-
+  .soundtracks-alta{
+   animation: efeito1 30s linear infinite;
+  }
 .msc img{
     margin: 5px;
-    width: 100px;
+    width: 140px;
     margin-left: 30px;
     border-radius: 50%;
      transition: 3s;   
@@ -412,31 +437,32 @@ footer{
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 1rem;
   }
-      
-  
+    
   .filme{
     min-width: 160px;
   flex-shrink: 0;
   }
 
 .filme img{
-    width: 136.4px;
-    margin: 5px;
-    height: 197px;
-    margin-left: 43px;
+    width: 168px;
+      margin: 0;
+    height: 240;
+    object-fit: cover;
+  
 }
 .ano-lanc{
       font-size: 0.9rem;
-    margin-left: 94px;
+   
 }
 .subtitulo-1{
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 6px;
+ 
 }
 .subtitulo-2{
-  font-size: 1rem;
+  font-size: 1.5rem;
+ margin-bottom: 6px;
 }
 footer{
   
@@ -454,13 +480,168 @@ body {
   margin: 0;
  
 }
-main{
-  flex:1;
 }
-}
+
+
+
+
+
+
 
 
 @media (max-width: 480px) {
+   main{
+    /* margin-top: 100px; */
+    flex:1;
+  }
+  .logo{
+    height: 50px;
+    margin-left: 7px;
+    margin-top: 4px;
+}
+#busca{
+    max-height: 20px;
+    margin-top: 20px;
+    margin-right: 160px;
+    
+
+}
+ header{
+    height: 80px;
+    background: var(--gradheaderpequeno);
+    justify-content: flex-end;
+  }
+  .uniao-logo-busca{
+  gap:5px;
+  display: flex;
+
+}
+
+  /* MOSTRA O HAMBÚRGUER */
+ 
+
+  /* ESCONDE MENU DESKTOP */
+  .menu-header{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: black;
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0;
+      z-index: 8;
+ 
+      
+  }
+  .item-menu{
+    color: white;
+  }
+  #login{
+    color: white;
+
+  }
+   .hamburguer{
+    display: flex;
+    margin-right: auto 0;
+    
+  }
+
+  .menu-header.active{
+    display: flex;
+  }
+
+  /* animação */
+  .hamburguer.active .barra:first-child {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburguer.active .barra:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguer.active .barra:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .dropdown-menu {
+    position: static; /* fica dentro do menu */
+    display: none;
+  }
+
+  .dropdown-menu.ativo {
+    display: flex; /* abre ao clicar */
+  }
+  .soundtracks-alta{
+   animation: efeito1 30s linear infinite;
+  }
+.msc img{
+    margin: 5px;
+    width: 140px;
+    margin-left: 30px;
+    border-radius: 50%;
+     transition: 3s;   
+}
+.carrossel-filmes{
+  position: relative;
+}
+.arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .left { left: 5px; }
+  .right { right: 5px; }
+
+  .filmes {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+    
+  .filme{
+    min-width: 160px;
+  flex-shrink: 0;
+  }
+
+.filme img{
+    width: 168px;
+  aspect-ratio: 2 / 3; 
+  object-fit: cover;
+  margin: 0;
+  
+}
+.ano-lanc{
+      font-size: 0.9rem;
+   
+}
+.subtitulo-1{
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+ 
+}
+.subtitulo-2{
+  font-size: 1.5rem;
+ margin-bottom: 6px;
+}
+footer{
+  
+    background: var(--vermelho);
+    display: flex;
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    color: var(--bege);
+    justify-content: center;
+   
+}
+body {
+  height: 100%;
+  margin: 0;
+ 
+}
  
 }
 
