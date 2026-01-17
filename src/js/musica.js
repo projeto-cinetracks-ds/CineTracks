@@ -38,6 +38,16 @@ const obras = {
     titulo:"barbie",
     tipo:"filme",
     imagem:"/src/assets/img/comedia.barbie.jpg"
+  },
+  "giardioesdas-galaxias":{
+  titulo:"Guardioes das galaxias",
+  tipo:"filme",
+  imagem:"/src/assets/img/guardioesdasgalaxias.jpg"
+  },
+  "bad-boys":{
+    titulo:"Bad boys",
+  tipo:"filme",
+  imagem:"/src/assets/img/adrenalina.badboys.jpg"
   }
   // adicione mais obras aqui se precisar
 };
