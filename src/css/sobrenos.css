@@ -222,8 +222,10 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
 
 .container-desenvolvedoras{
   display: flex;
-  gap:50px;
   margin-top: 50px;
+  justify-content: center;
+  gap:50px;
+  width: 100%;
 }
 #titulodesenvolvedoras{
   font-family: 'norwester';
@@ -236,21 +238,14 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
   border-radius: 70px;
   background-color:#000;
   padding: 30px;
-  width: 100%;
+  /* width: 100%; */
 }
 /* caixa de desenvolvedora */
-.card-desenvolvedora-esquerda{
-  border-radius: 50px;
-  padding:10px;
-  background-color: #000;
-    display: flex;
-  align-items: center;
-  padding-left: 5px;
-   margin-top: 30px;
-   max-width: 100%;
-}
 .coluna-esquerda-desenvolvedoras{
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 .nome{
   font-family: 'bebas neue';
@@ -271,6 +266,7 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
   gap:30px;
   margin-top: 30px;
 }
+
 .foto{
   border-radius: 70px;
   width: 15%;
@@ -278,7 +274,19 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
   margin-left: 20px;
 }
 .icones-desenvolvedoras{
-   width: 9%;
+    display: block;
+  height: 40px;        /* ou o tamanho que você quiser */
+  width: auto; 
+}
+.linkagem{
+   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;      
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+
 }
 
 /* DIREITAAAAA DIREITAAAA */
@@ -286,10 +294,13 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
 .coluna-direita-desenvolvedoras{
    display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  width: 50%;
+
+  justify-content: flex-end; /* cola embaixo */
+
   
 }
-.card-desenvolvedora-direita{
+.card-desenvolvedora{
    border-radius: 50px;
  padding:10px;
   background-color: #000;
@@ -299,7 +310,13 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
   max-width: 100%;
   margin-top: 30px;
   margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
 }
+.pngbrabo{
+  width: 30px;
+}
+
 footer{
   margin-top: 30px;
     background: #000;
@@ -478,8 +495,7 @@ footer{
     .coluna-direita-desenvolvedoras{
         display: contents;
     }
-    .card-desenvolvedora-direita,
-    .card-desenvolvedora-esquerda{
+    .card-desenvolvedora{
       margin: auto 0;
       margin-right: 20px;
       margin-left: 20px;
@@ -506,6 +522,10 @@ footer{
 
 /* medida para celular pequeno */
 @media (max-width: 480px) {
+  #titulodesenvolvedoras{
+    margin: 0 10px;
+    font-size: 6.7;
+  }
 
 }
 
