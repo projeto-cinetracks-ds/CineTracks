@@ -203,6 +203,19 @@ main{
   position: relative;  
   /* tirei p margin left para o hover funcionar melhor viu, mas é pura estética, ent se precisar pode voltar com ele */
    transition: box-shadow 0.25s ease;
+   cursor: pointer;
+   
+}
+.music-card-playing{
+   margin-top: 20px;
+  margin-left: 20px;
+  color: white;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;  
+  /* tirei p margin left para o hover funcionar melhor viu, mas é pura estética, ent se precisar pode voltar com ele */
+   transition: box-shadow 0.25s ease;
    
 }
 

@@ -38,6 +38,9 @@ header{
 .logo{
  height: 90px;
 }
+#letreiro{
+  display:none;
+}
 
 .menu-header{
     list-style: none;
@@ -218,18 +221,28 @@ footer{
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 768px) {
+@media (max-width: 768px) /*tamanho tablet*/ {
  .logo{
-    height: 50px;
-    margin-left: 7px;
-    margin-top: 4px;
+    display:none;
+}
+#container-letreiro{
+  display: flex;
+  justify-content: center;
+  min-width: 600px;
+  flex-shrink: 0;
+}
+#letreiro{
+  display:flex;
+  height: 50px;
+  width: auto;
+  margin-left: 60px;
 }
 #busca{
     max-height: 25px;
     margin-top: 20px;
 }
  header{
-    height: 60px;
+    height: 80px;
     background: var(--gradheaderpequeno);
   }
 
@@ -256,19 +269,20 @@ footer{
     color: white;
 
   }
+  .barra {
+   width: 40px;
+   height: 4px;
+}
    .hamburguer{
     display: flex;
-    margin-right: auto 0;
-    
+    margin-right: auto 0;  
   }
-
   .menu-header.active{
     display: flex;
   }
-
   /* animação */
   .hamburguer.active .barra:first-child {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
   }
 
   .hamburguer.active .barra:nth-child(2) {
@@ -276,7 +290,7 @@ footer{
   }
 
   .hamburguer.active .barra:last-child {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
   }
   .dropdown-menu {
     position: static; /* fica dentro do menu */
@@ -286,16 +300,17 @@ footer{
   .dropdown-menu.ativo {
     display: flex; /* abre ao clicar */
   }
-
-    form{
-        width: 80%;
-        margin-bottom: 300px;
-    }
-    form h2{
-    font-size: 2rem;
-    }
-    .lbl-rotulos{
-    font-size: 1rem;
+form{
+width: 60%;
+ /* margin-bottom: 100px; */
+ margin-top: 150px;
+ margin-bottom: 0;
+}
+form h2{
+font-size: 2rem;
+}
+.lbl-rotulos{
+font-size: 1rem;
 }
 .txtinput{
     width: 300px;
@@ -308,6 +323,7 @@ footer{
     width: 100%;
     text-align: center;
     justify-content: center;
+    margin-top: 150px;
    
 }
 .footer-container{
@@ -319,6 +335,7 @@ body {
 }
 main{
   flex:1;
+  height: 100%;
 }
 }
 

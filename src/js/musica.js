@@ -129,7 +129,7 @@ let currentAudio = null;
 
 cards.forEach((card, index) => {
   const audio = card.querySelector('audio');
-  const title = card.querySelector('.music-title');
+  const title = card.querySelector('.music-title'); //hahahahahahahahajaakaja
   const playPauseBtn = card.querySelector('.play-pause');
   const prevBtn = card.querySelector('.prev');
   const nextBtn = card.querySelector('.next');
@@ -176,7 +176,8 @@ cards.forEach((card, index) => {
   
 // CODIGO CERTOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
   // 👉 clicar no nome
-  title.addEventListener('click', playMusic);
+  title.addEventListener('click', playMusic);  
+   
 
   // ▶️ / ⏸
   playPauseBtn.addEventListener('click', () => {
@@ -226,6 +227,11 @@ function formatTime(time) {
   const seconds = Math.floor(time % 60).toString().padStart(2, '0');
   return `${minutes}:${seconds}`;
 }
+
+
+
+
+
 
 // HAMBURGUER HAMBURGUER
 const hamburguer = document.querySelector('.hamburguer');
@@ -281,7 +287,6 @@ document.querySelectorAll(".music-card").forEach(card => {
 
 
 // const params = new URLSearchParams(window.location.search);
-// const params = new URLSearchParams(window.location.search);
 const musicToPlay = params.get('play');
 
 if (musicToPlay) {
@@ -289,6 +294,10 @@ if (musicToPlay) {
 
   if (audio) {
     const card = audio.closest('.music-card');
+
+    // 👉 lista correta de cards (APENAS os que estão na página)
+    // const cardsDaObra = [...document.querySelectorAll('.music-card')];
+
     const button = card.querySelector('.play-pause');
     const player = card.querySelector('.player');
 
@@ -297,18 +306,18 @@ if (musicToPlay) {
     button.classList.remove('hidden');
 
     // garante que nenhuma outra esteja tocando
-if (currentAudio && currentAudio !== audio) {
-  currentAudio.pause();
-  currentAudio.currentTime = 0;
-}
+    if (currentAudio && currentAudio !== audio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
 
     // toca a música
     audio.play();
 
-
+    // estado global CORRETO
     currentAudio = audio;
-currentCard = card;
-currentIndex = [...cards].indexOf(card);
+    currentCard = card;
+    currentIndex = cardsDaObra.indexOf(card);
 
     // estado visual correto
     button.textContent = '⏸';
@@ -316,8 +325,28 @@ currentIndex = [...cards].indexOf(card);
 
     // opcional: marca o card como tocando
     card.classList.add('playing');
+
+    // ⏮ anterior
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      cards[currentIndex - 1].querySelector('.music-title').click();
+    }
+  });
+
+  // ⏭ próxima
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < cards.length - 1) {
+      cards[currentIndex + 1].querySelector('.music-title').click();
+    }
+  });
+
+
   }
 }
+
+
+
+
 
 
 

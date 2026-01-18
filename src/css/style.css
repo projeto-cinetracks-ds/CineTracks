@@ -32,7 +32,6 @@ header{
  background: var(--gradvermelho);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 97px;   
   width: 100%;
   padding: 0 24px;
@@ -41,28 +40,26 @@ header{
 .logo{
  height: 90px;
 }
+#letreiro{
+  display:none;
+}
 
 .menu-header{
     list-style: none;
-    /* margin-left: 1090px; */
     display: flex;
     gap:20px;
-    /* margin-right: 5px; */
-}
-.uniao-logo-busca{
-  gap:30px;
-  display: flex;
-  align-items: center;
+    margin-right: 2px;
 }
 #busca{
     height: 25px;
-    margin-top: 35px;
+    margin-top: 20px;
     border-radius: 15px;
     border: #f6e0d2;
     width: 200px;
     padding: 5px;
     font-weight: bold;
-    margin-right: 200px;
+    margin-right: 770px;
+    margin-left: 30px;
 }
 .dropdown-btn {
   cursor: pointer;
@@ -232,6 +229,7 @@ header{
     width: 180px;
     margin: 5px;
     height: 270px;
+    
  
 }
 .filme img:hover{
@@ -332,28 +330,49 @@ footer{
     /* margin-top: 100px; */
     flex:1;
   }
-  .logo{
-    height: 50px;
-    margin-left: 7px;
-    margin-top: 4px;
-}
-#busca{
-    max-height: 20px;
-    margin-top: 20px;
-    margin-right: 160px;
-    
-
-}
- header{
-    height: 60px;
-    background: var(--gradheaderpequeno);
-    justify-content: flex-end;
+ .logo{
+    display: none;
   }
-  .uniao-logo-busca{
-  gap:5px;
-  display: flex;
 
-}
+  header{
+    height: 80px;
+    background: var(--gradheaderpequeno);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* #uniao-letreiro-busca{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  } */
+
+  #busca{
+    order: 1;
+    /* margin-left: 10px; */
+    /* display: block;  */
+    margin: 0;
+  }
+
+  #letreiro{
+    order: 2;
+    height: 50px;
+    width: auto;
+    display: flex;
+  }
+
+  .hamburguer{
+    display: flex;
+    order: 3;
+    /* margin-right: 10px; */
+    margin: 0;
+  }
+  nav{
+  margin-left: -140px;
+  }
+
 
   /* MOSTRA O HAMBÚRGUER */
  
@@ -379,11 +398,6 @@ footer{
   #login{
     color: white;
 
-  }
-   .hamburguer{
-    display: flex;
-    margin-right: auto 0;
-    
   }
 
   .menu-header.active{
@@ -473,12 +487,10 @@ footer{
     text-align: center;
     color: var(--bege);
     justify-content: center;
-   
 }
 body {
   height: 100%;
   margin: 0;
- 
 }
 }
 
@@ -495,27 +507,52 @@ body {
     flex:1;
   }
   .logo{
-    height: 50px;
-    margin-left: 7px;
-    margin-top: 4px;
-}
-#busca{
-    max-height: 20px;
-    margin-top: 20px;
-    margin-right: 160px;
-    
+    display: none;
+  }
 
-}
- header{
+  header{
     height: 80px;
     background: var(--gradheaderpequeno);
-    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap:30px;
   }
-  .uniao-logo-busca{
-  gap:5px;
-  display: flex;
 
-}
+  /* #uniao-letreiro-busca{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  } */
+
+  #busca{
+    order: 1;
+    /* margin-left: 10px; */
+    /* display: block;  */
+    margin: 0;
+    height: 15px;
+    width: 98px;
+
+  }
+
+  #letreiro{
+    order: 2;
+    height: 30px;
+    width: auto;
+    display: flex;
+  }
+
+  .hamburguer{
+    display: flex;
+    order: 3;
+    /* margin-right: 10px; */
+    margin: 0;
+  }
+  nav{
+  margin-left: -90px;
+  }
+
 
   /* MOSTRA O HAMBÚRGUER */
  
@@ -542,11 +579,7 @@ body {
     color: white;
 
   }
-   .hamburguer{
-    display: flex;
-    margin-right: auto 0;
-    
-  }
+  
 
   .menu-header.active{
     display: flex;

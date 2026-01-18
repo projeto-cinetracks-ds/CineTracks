@@ -136,24 +136,11 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
 .titulocinetracks{
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
-#Cine{
-  background: linear-gradient(to right, #e4b23a, #f8d175,#e4b23a);
-  /* IGNORE A LINHA AMARELA, ELA É UM AVISO, MAS NÃO INTERFERE EM NADA */
-  -webkit-background-clip: text;      
-  -webkit-text-fill-color: transparent;
-  font-family: 'norwester';
-  font-size: 9rem;
- margin-top: auto;
- font-weight: 400;
-}
-#tracks{
-  background: linear-gradient(to right, #e4b23a, #f8d175,#e4b23a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'Etna';
-  font-size: 7rem;
-  margin-top: 2.2%;
+#cine-letreiro{
+   height: 140px;
+  width: auto;
 }
 .container-cards{
   display: flex;
@@ -357,12 +344,13 @@ footer{
 
   .logo{
     height: 50px;
-    margin-left: 7px;
+    margin-left: 4px;
     margin-top: 4px;
   }
   header{
     height: 60px;
     background: var(--gradheaderpequeno);
+    padding: 0 5px;
   }
 
   /* MOSTRA O HAMBÚRGUER */
@@ -377,32 +365,26 @@ footer{
     background: black;
     width: 200px;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2px;
     margin: 0;
-    
   }
   .item-menu{
     color: white;
   }
   #login{
     color: white;
-
   }
   .hamburguer{
     display: flex;
     margin-right: auto 0;
-    
   }
-
   .menu-header.active{
     display: flex;
   }
-
   /* animação */
   .hamburguer.active .barra:first-child {
     transform: translateY(9px) rotate(45deg);
   }
-
   .hamburguer.active .barra:nth-child(2) {
     opacity: 0;
   }
@@ -414,27 +396,17 @@ footer{
     position: static; /* fica dentro do menu */
     display: none;
   }
-
   .dropdown-menu.ativo {
     display: flex; /* abre ao clicar */
   }
-
- 
- #Cine{
-  
-  font-size: 5rem;
- margin-top: auto;
- font-weight: 400;
+ .titulocinetracks{
+  padding: 10px;
 }
-#tracks{
- 
-  font-size: 3rem;
-  margin-top:6.7% ;/*plmdds arrumar esse tracks, ele quebra mto*/
+#cine-letreiro{
+   height: 70px;
 }
 .texto{
-  
   font-size: 0.9rem;
-  
 }
 .titulo-card{
   margin-bottom: 5px;
