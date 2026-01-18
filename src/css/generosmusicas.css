@@ -26,35 +26,38 @@ header{
   justify-content: space-between;
   height: 97px;   
   width: 100%;
-  padding: 0 24px;
+  padding: 0 10px;
   z-index: 2;/*porcentagem para facilitar na responsividade, acredito eu */ /*era fake news, mas deixa assim*/
 }
 .logo{
  height: 90px;
 }
-
-.menu-header{
-    list-style: none;
-    /* margin-left: 1090px; */
-    display: flex;
-    gap:20px;
-    /* margin-right: 5px; */
-}
-.uniao-logo-busca{
-  gap:30px;
-  display: flex;
-  align-items: center;
-}
 #busca{
     height: 25px;
-    margin-top: 35px;
+    margin-top: 20px;
     border-radius: 15px;
     border: #f6e0d2;
     width: 200px;
     padding: 5px;
     font-weight: bold;
-    margin-right: 200px;
 }
+#uniao-logo-busca{
+  gap:30px;
+  display: flex;
+    justify-content: space-between;
+  align-items: center;
+}
+#letreiro{
+  display:none;
+}
+
+.menu-header{
+     list-style: none;
+    display: flex;
+    gap:20px;
+    margin-right: 2px;
+}
+
 .dropdown-btn {
   cursor: pointer;
     background: none;
@@ -205,7 +208,7 @@ main{
     
 }
 .img{
-    width: 120px;       /* ou 70px, 100px */
+    width: 120px;      
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
@@ -273,26 +276,44 @@ footer{
     width: 40px;
     margin-top: 12px;
 }
+
+
+
 @media (max-width: 768px) {
   
   
   .logo{
-    height: 50px;
-    margin-left: 7px;
-    margin-top: 4px;
-}
-#busca{
-    max-height: 20px;
-    margin-top: 20px;
-    margin-right: 160px;
-    
-
+    display:none;
 }
  header{
-    height: 60px;
+    height: 80px;
     background: var(--gradheaderpequeno);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
   }
-  /* MOSTRA O HAMBÚRGUER */
+  #busca{
+    order: 1;
+    margin: 0;
+  }
+  #letreiro{
+    order: 2;
+    height: 50px;
+    width: auto;
+    display: flex;
+  }
+   .hamburguer{
+    display: flex;
+    margin: 0; 
+  }
+  nav{
+    order: 4;
+  }  
+  .scrr{
+order: 3;
+display: flex;
+  }
  
 
   /* ESCONDE MENU DESKTOP */
@@ -320,11 +341,7 @@ footer{
   .seta{
     z-index: 8;
   }
-   .hamburguer{
-    display: flex;
-    margin-right: auto 0;
-    
-  }
+
 
   .menu-header.active{
     display: flex;
@@ -350,5 +367,61 @@ footer{
   .dropdown-menu.ativo {
     display: flex; /* abre ao clicar */
   }
+}
+
+/* acabamento pra ficar tudo certinho */
+@media (max-width: 600px) {
+
+ header{
+   padding: 0 10px;
+  }
+  #busca{
+    height: 25px;
+    width: 117px;
+  }
+  #letreiro{
+    height: 43px;
+    width: auto;
+  }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    header{
+   padding-top: 20px;
+  }
+  #busca{
+    height: 23px;
+    width: 120px;
+   
+  }
+  #letreiro{
+    height: 43px;
+    width: auto;
+  }
+   .hamburguer{
+    z-index: 8;
+  }
+.img{
+    width: 95px;      
+  height: 95px;
+}
+.lista-musicas{
+  gap: 28px;
+  height: 145.5px;
+}
+.titulo{
+     font-size: 1.10833333rem;
+     font-weight: 100;
+    margin-left: 5px;
+}
+.uniao-titulo-carreira{
+  gap:20px;
+  display: flex;
+  flex-direction: column;
+}
 }
 
