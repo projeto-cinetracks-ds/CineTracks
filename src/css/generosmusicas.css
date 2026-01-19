@@ -218,13 +218,9 @@ main{
 .nome-musica{
     color:#fff;
     font-family: 'open sans';
-    font-weight: 600;  
+    font-weight: bold;  
     text-align: center;
     font-size:14px ;
-}
-.nome-grande{
-  max-width: 150px;
-  font-size:14px ;
 }
 a{
   text-decoration: none;

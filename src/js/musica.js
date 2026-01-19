@@ -48,7 +48,12 @@ const obras = {
     titulo:"Bad boys",
   tipo:"filme",
   imagem:"/src/assets/img/adrenalina.badboys.jpg"
-  }
+  },
+   "arcane":{
+  titulo:"Arcane",
+  tipo:"serie",
+  imagem:"/src/assets/img/poster.arcane.jpg"
+   }
   // adicione mais obras aqui se precisar
 };
 
