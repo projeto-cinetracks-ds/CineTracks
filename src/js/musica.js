@@ -53,6 +53,11 @@ const obras = {
   titulo:"Arcane",
   tipo:"serie",
   imagem:"/src/assets/img/poster.arcane.jpg"
+   },
+   "shrek":{
+  titulo:"shrek",
+  tipo:"Franquia de Filmes",
+  imagem:"/src/assets/img/animado.shrek.webp"
    }
   // adicione mais obras aqui se precisar
 };

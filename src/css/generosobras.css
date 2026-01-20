@@ -165,7 +165,6 @@ main{
     display: flex;
     gap:40px;
      position: relative;
-     height: 270px;
 }
 .lista-musicas{
   display: flex;
@@ -216,7 +215,6 @@ main{
   box-shadow: 0 0 30px rgba(255, 51, 0, 0.9);
   transform: scale(1.03);
 }
-
 .comedia {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
@@ -268,8 +266,13 @@ main{
 .nome-obra{
     color:#fff;
     font-family: 'open sans';
-    font-weight: 600;
+    font-weight: bold;
     text-decoration: none;
+    text-align: center;
+}
+
+ a{
+   text-decoration: none;
 }
 
 footer{
