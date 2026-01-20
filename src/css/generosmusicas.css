@@ -164,12 +164,16 @@ main{
     display: flex;
     gap:40px;
      position: relative;
+ 
      
 }
 .lista-musicas{
   display: flex;
   gap: 40px;
    overflow-x: hidden;  
+    padding-top:10px ;
+
+  
   
  
 }
