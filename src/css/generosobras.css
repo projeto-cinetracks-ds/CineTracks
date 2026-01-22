@@ -212,14 +212,14 @@ main{
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .adrenalina:hover{
-  box-shadow: 0 0 30px rgba(255, 51, 0, 0.9);
+  box-shadow: 0 0 40px rgba(196, 41, 2, 0.6);
   transform: scale(1.03);
 }
 .comedia {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .comedia:hover{
-  box-shadow: 0 0 30px rgba(255, 213, 28, 0.9);
+  box-shadow: 0 0 40px rgba(177, 145, 1, 0.6);
   transform: scale(1.03);
 }
 
@@ -227,7 +227,7 @@ main{
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .heroicos:hover{
-  box-shadow: 0 0 30px rgba(30, 0, 255, 0.9);
+  box-shadow: 0 0 40px rgba(20, 4, 143, 0.7);
   transform: scale(1.03);
 }
 
@@ -238,6 +238,13 @@ main{
   box-shadow: 0 0 50px rgba(105, 0, 0, 1);
   transform: scale(1.03);
 }
+.animados {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.animados:hover{
+  box-shadow: 0 0 50px rgba(87, 2, 139, 0.7);
+  transform: scale(1.03);
+}
 .barra{
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
@@ -245,23 +252,11 @@ main{
   box-shadow: 0 0 30px rgba(255, 0, 157, 0.8);
   transform: scale(1.03);
 }
-
-
-
-
-
-
-
-
-
 .img{
     width: auto;       /* ou 70px, 100px */
   height: 200px;
   object-fit: cover;
   cursor: pointer;
-
-   
-
 }
 .nome-obra{
     color:#fff;
