@@ -320,7 +320,7 @@ footer{
 
 
 /* RESPONSIVIDADE  */
-/* responnsividade para as setas aparecerem assim que o primeiro filme sair de tela, muito capricho */
+/* responnsividade para as setas aparecerem assim que o primeiro filme sair de tela */
 @media (max-width: 1388px) { 
   .carrossel-filmes{
   position: relative;
@@ -377,7 +377,7 @@ footer{
 order: 3;
 display: flex;
   }
-  /* ESCONDE MENU DESKTOP */
+  
   .menu-header{
     display: none;
     position: absolute;
@@ -423,14 +423,10 @@ display: flex;
    animation: efeito1 30s linear infinite;
   }
 .msc img{
-    margin: 5px;
     width: 140px;
-    margin-left: 30px;
-    border-radius: 50%;
-     transition: 3s;   
+    margin-left: 30px;   
 }
   .filmes {
-    display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
   }
@@ -445,23 +441,19 @@ display: flex;
       margin: 0;
     height: 240px;
     object-fit: cover;
-  
 }
 .ano-lanc{
       font-size: 0.9rem;
-   
 }
 .subtitulo-1{
   font-size: 1.5rem;
   margin-bottom: 6px;
- 
 }
 .subtitulo-2{
   font-size: 1.5rem;
  margin-bottom: 6px;
 }
-footer{
-  
+footer{ 
     background: var(--vermelho);
     display: flex;
     height: 80px;
