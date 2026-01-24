@@ -30,13 +30,13 @@ const obras = {
   },
   "aranhaverso":{
     titulo:"Homem aranha no Aranhaverso",
-    tipo:"filme",
+    tipo:"Filme",
     imagem:"/src/assets/img/aranhaversoposter.jpg"
 
   },
   "barbie":{
-    titulo:"barbie",
-    tipo:"filme",
+    titulo:"Barbie",
+    tipo:"Filme",
     imagem:"/src/assets/img/comedia.barbie.jpg"
   },
   "giardioesdas-galaxias":{
@@ -46,18 +46,33 @@ const obras = {
   },
   "bad-boys":{
     titulo:"Bad boys",
-  tipo:"filme",
+  tipo:"Filme",
   imagem:"/src/assets/img/adrenalina.badboys.jpg"
   },
    "arcane":{
   titulo:"Arcane",
-  tipo:"serie",
+  tipo:"Série",
   imagem:"/src/assets/img/poster.arcane.jpg"
    },
    "shrek":{
-  titulo:"shrek",
+  titulo:"Shrek",
   tipo:"Franquia de Filmes",
   imagem:"/src/assets/img/animado.shrek.webp"
+   },
+   "avengers":{
+    titulo: "Avengers: Endgame",
+    tipo:"Filme",
+    imagem:"/src/assets/img/heroico.avengersendgame.jpeg"
+   },
+   "batman":{
+    titulo:"Batman",
+    tipo: "Filme",
+    imagem: "/src/assets/img/heroico.batman.jpeg"
+   },
+   "it":{
+    titulo:"It",
+    tipo:"Saga",
+    imagem:"/src/assets/img/itacoisa.png"
    }
   // adicione mais obras aqui se precisar
 };
@@ -353,17 +368,3 @@ if (musicToPlay) {
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

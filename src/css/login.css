@@ -5,13 +5,15 @@
 }
 :root{
    --gradvermelho:linear-gradient(to right,#000000,#000,#620606,#f0c68b,#EFDAA4);
-      --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
+   --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
     --bege: #f6e0d2;
     --preto: #0000;
      --vermelho: #520909;
     --dourado: #e4b23a;
     --vermelhoescuro:#280404;
     --grad2: linear-gradient(rgba(42, 0, 26, 0.393));
+    --graddourado: #3c0202;
+    /* linear-gradient(to right,  #000,#000, #620606 ); */
 
 }
 body{
@@ -105,7 +107,6 @@ header{
     white-space: nowrap;
 }
 
-
  #login {
     font-size: 18px;
     text-decoration: none;
@@ -163,15 +164,28 @@ form h2{
     font-family: 'bebas neue';
 }
 .lbl-rotulos{
+  font-weight: bolder;
     font-size: 1.2rem;
     font-family: 'open sans';
 }
 .txtinput{
+    font-family: 'open sans';
     width: 400px;
     height: 50px;
     border-radius: 30px;
 }
-   
+#sem-conta{
+  font-family: 'open sans';
+} 
+#sem-conta span{
+  text-decoration: underline;
+  cursor: pointer;
+}
+#ou{
+  margin-top: -10px;
+  font-family: 'open sans';
+}  
+
 footer{
   margin-top: 30px;
     background: var(--vermelho);
@@ -181,6 +195,35 @@ footer{
     text-align: center;
     color: var(--bege);
     justify-content: center;
+}
+.btn-acessar{
+  font-family: 'open sans';
+  background: var(--graddourado);
+  font-weight: bold;
+  color: #fff;
+  height: 40px;
+  width: 170px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+ border: 2px solid #2d0101;
+ 
+
+}
+.btn-acessar:hover{
+  transform: scale(1.02);
+  
+}
+.btn-conta{
+  cursor: pointer;
+  font-family: 'open sans';
+  color: #fff;
+  height: 30px;
+  width: 170px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+
 }
 .footer-container{
   margin-top: 10px;
