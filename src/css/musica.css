@@ -206,7 +206,6 @@ main{
   gap: 20px;
   align-items: center;
   position: relative;  
-  /* tirei p margin left para o hover funcionar melhor viu, mas é pura estética, ent se precisar pode voltar com ele */
    transition: box-shadow 0.25s ease;
    cursor: pointer;
    height: max-content;
@@ -220,7 +219,6 @@ main{
   gap: 20px;
   align-items: center;
   position: relative;  
-  /* tirei p margin left para o hover funcionar melhor viu, mas é pura estética, ent se precisar pode voltar com ele */
    transition: box-shadow 0.25s ease;
    
 }
@@ -462,7 +460,7 @@ footer{
   }
 
   .dropdown-menu.ativo {
-    display: flex; /* abre ao clicar */
+    display: flex; 
   }
   .bloco-obra{
     background: var(--gradescuropequeno);
@@ -471,7 +469,7 @@ footer{
     background: var(--gradescuropequenobarbie);
    }
 .music-card {
-  min-height: 180px; /* aumenta altura mínima do card */
+  min-height: 180px; 
   padding:50px 20px;
 
   margin:auto;
@@ -480,9 +478,8 @@ footer{
 }
 .desc-msc {
   text-align: center; 
-   align-self: flex-start;
+ 
 }
-
 .desc-msc h3,
 .desc-msc p {
   margin: 0;
@@ -490,7 +487,7 @@ footer{
 .uniao-texto-play{
  display: flex;
   flex-direction: column;   
-  align-items: center;      /* centraliza horizontalmente */
+  align-items: center;     
   gap: 0.7rem;        
 }
 .player button {
@@ -500,11 +497,11 @@ footer{
 }
 .player {
   gap: 0;
-   width: 140px;             /* tamanho do player */
+   width: 140px;            
    position: relative;
   align-self: flex-start;
   margin-top: 10px;
-  height: 30px;              /* espaço fixo reservado */
+  height: 30px;              
   transition: opacity 0.25s ease;
 }
 .music-card.active .player {

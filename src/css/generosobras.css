@@ -192,7 +192,7 @@ main{
 .seta.oculta{
   opacity: 0;
   pointer-events: none;
-}
+}   
 
 .esquerda{
   left: 10px;
@@ -208,6 +208,9 @@ main{
    align-items: center;
    gap:9px;
 }
+
+
+
 .adrenalina {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
@@ -253,7 +256,7 @@ main{
   transform: scale(1.03);
 }
 .img{
-    width: auto;       /* ou 70px, 100px */
+  width: 140px;
   height: 200px;
   object-fit: cover;
   cursor: pointer;
@@ -445,8 +448,8 @@ display: flex;
     z-index: 7;
    }
 .img{
-    width: auto;      
-  height: 158.33333px;
+   width:110.8331px;    
+  height: 158.333px;
 }
 .lista-musicas{
   gap:42px;
