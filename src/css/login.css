@@ -12,7 +12,7 @@
     --dourado: #e4b23a;
     --vermelhoescuro:#280404;
     --grad2: linear-gradient(rgba(42, 0, 26, 0.393));
-      --cor:linear-gradient(to right,#946800,#d0a338,#e3c57f,#946800);
+      --cor:linear-gradient(to right,rgb(50, 0, 0));
     /* linear-gradient(to right,  #000,#000, #620606 ); */
 
 }
@@ -200,13 +200,14 @@ footer{
   font-family: 'open sans';
   background: var(--cor);
   font-weight: 800;
-  color: #130000;
+  color: var(--cor);
   height: 40px;
   width: 170px;
   border-radius: 20px;
   cursor: pointer;
   transition: transform 0.5s ease;
- border: 2px solid var(--cor);
+  border: 2px solid var(--cor);
+ /* tbm nn sei oq fazer aki */
  
 
 }
@@ -239,6 +240,7 @@ footer{
 }
 #copy{
   font-family: 'open sans';
+   margin-right: 3px;
 }
 #tracks-footer{
   font-family: 'Etna';
