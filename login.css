@@ -183,7 +183,7 @@ form h2{
 }
 #ou{
   margin-top: -10px;
-  font-family: 'open sans';
+  font-family: 'open sans',serif,Georgia, 'Times New Roman', Times, serif;
 }  
 
 footer{

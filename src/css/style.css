@@ -19,6 +19,9 @@ body{
   overflow-y: auto;   
  
 }
+#teste{
+  display: none;
+}
   .wrapper {
  min-height: 100vh;      /* página sempre do tamanho da tela */
   display: flex;          /* NÃO é no body */
