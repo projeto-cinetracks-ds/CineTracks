@@ -6,7 +6,7 @@ const obras = {
   "stranger-things": {
     titulo: "Stranger Things",
     tipo: "Série",
-    imagem: "../../../CineTracks/src/assets/img/strangerthings.jpgs"
+    imagem: "../../../CineTracks/src/assets/img/strangerthings.jpg"
   },
   "top-gun": {
     titulo: "Top Gun",
