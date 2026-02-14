@@ -6,73 +6,73 @@ const obras = {
   "stranger-things": {
     titulo: "Stranger Things",
     tipo: "Série",
-    imagem: "/src/assets/img/strangerthings.jpg"
+    imagem: "../../../CineTracks/src/assets/img/strangerthings.jpgs"
   },
   "top-gun": {
     titulo: "Top Gun",
     tipo: "Filme",
-    imagem: "/src/assets/img/topgun.png"
+    imagem: "../../../CineTracks/src/assets/img/topgun.png"
   },
   "pantera-negra": {
     titulo: "Pantera Negra",
     tipo: "Filme",
-    imagem: "/src/assets/img/posterpanteranegra.jpg"
+    imagem: "../../../CineTracks/src/assets/img/posterpanteranegra.jpg"
   },
   "sebeber-naocase":{
     titulo: "Se Beber, Não Case",
     tipo: "Filme",
-    imagem: "/src/assets/img/sebebernaocaseposter.jpg"
+    imagem: "../../../CineTracks/src/assets/img/sebebernaocaseposter.jpg"
   },
   "velozes-furiosos": {
     titulo:"Velozes e Furiosos: Desafio em Tóquio",
     tipo:"Filme",
-    imagem:"/src/assets/img/velozesefuriosostokio.jpg"
+    imagem:"../../../CineTracks/src/assets/img/velozesefuriosostokio.jpg"
   },
   "aranhaverso":{
     titulo:"Homem aranha no Aranhaverso",
     tipo:"Filme",
-    imagem:"/src/assets/img/aranhaversoposter.jpg"
+    imagem:"../../../CineTracks/src/assets/img/aranhaversoposter.jpg"
 
   },
   "barbie":{
     titulo:"Barbie",
     tipo:"Filme",
-    imagem:"/src/assets/img/comedia.barbie.jpg"
+    imagem:"../../../CineTracks/src/assets/img/comedia.barbie.jpg"
   },
   "giardioesdas-galaxias":{
   titulo:"Guardioes das galaxias",
   tipo:"filme",
-  imagem:"/src/assets/img/guardioesdasgalaxias.jpg"
+  imagem:"../../../CineTracks/src/assets/img/guardioesdasgalaxias.jpg"
   },
   "bad-boys":{
     titulo:"Bad boys",
   tipo:"Filme",
-  imagem:"/src/assets/img/adrenalina.badboys.jpg"
+  imagem:"../../../CineTracks/src/assets/img/adrenalina.badboys.jpg"
   },
    "arcane":{
   titulo:"Arcane",
   tipo:"Série",
-  imagem:"/src/assets/img/poster.arcane.jpg"
+  imagem:"../../../CineTracks/src/assets/img/poster.arcane.jpg"
    },
    "shrek":{
   titulo:"Shrek",
   tipo:"Franquia de Filmes",
-  imagem:"/src/assets/img/animado.shrek.webp"
+  imagem:"../../../CineTracks/src/assets/img/animado.shrek.webp"
    },
    "avengers":{
     titulo: "Avengers: Endgame",
     tipo:"Filme",
-    imagem:"/src/assets/img/heroico.avengersendgame.jpeg"
+    imagem:"../../../CineTracks/src/assets/img/heroico.avengersendgame.jpeg"
    },
    "batman":{
     titulo:"Batman",
     tipo: "Filme",
-    imagem: "/src/assets/img/heroico.batman.jpeg"
+    imagem: "../../../CineTracks/src/assets/img/heroico.batman.jpeg"
    },
    "it":{
     titulo:"It",
     tipo:"Saga",
-    imagem:"/src/assets/img/itacoisa.png"
+    imagem:"../../../CineTracks/src/assets/img/itacoisa.png"
    }
   // adicione mais obras aqui se precisar
 };
