@@ -411,6 +411,10 @@ display: flex;
 .lista-musicas{
   gap: 28px;
 }
+.seta{
+  top:51%;
+}
+
 .titulo{
      font-size: 1.10833333rem;
      font-weight: 100;
