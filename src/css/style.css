@@ -172,13 +172,13 @@ header{
    margin-top: 15px;
    margin-left: 0;
    animation: efeito1 100s linear infinite;
+    gap: 20px;
    
    
 }
 .msc img{
     margin: 5px;
     width: 150px;
-    margin-left: 60px;
     border-radius: 50%;
      transition: 3s;   
 }
@@ -415,8 +415,23 @@ display: flex;
     display: flex; /* abre ao clicar */
   }
   .soundtracks-alta{
-   animation: efeito1 30s linear infinite;
+    animation: none;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   gap: 15px;
   }
+  .soundtracks-alta::-webkit-scrollbar {
+  height: 6px;
+}
+
+.soundtracks-alta::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.soundtracks-alta::-webkit-scrollbar-thumb {
+  background: #520909;
+  border-radius: 10px;
+}
 .msc img{
     width: 140px;
     margin-left: 30px;   
