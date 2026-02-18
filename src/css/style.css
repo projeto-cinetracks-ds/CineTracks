@@ -14,11 +14,10 @@
 }
 body{
   background-color: black;
-overflow: hidden;
-  max-width: 100%;
-}
-#teste{
-  display: none;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
   main{
   padding: 10px;
@@ -171,7 +170,7 @@ header{
    display: flex;
    margin: 30px;
    margin-top: 15px;
-   margin-left: -30px;
+   margin-left: 0;
    animation: efeito1 100s linear infinite;
    
    
