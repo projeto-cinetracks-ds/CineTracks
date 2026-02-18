@@ -59,10 +59,13 @@ rel="stylesheet">
        
        
     </header>
-    <div class="wrapper"> <!-- coloquei isto para ver diferença na responsividade, caso atrapalhe pode tirar (serve pro footer tocar o chão) -->
+   
 
         <main>
-            <h3 class="subtitulo-1">SOUNDTRACKS EM ALTA</h3>
+            <div id="espaço-busca">
+             <input type="text" id="busca-responsividade" placeholder="Pesquisar"> <!--coloquei esse busca pra ficar melhor na responsividade-->
+             </div>
+            <h3 id="subtitulo-1" class="subtitulos">SOUNDTRACKS EM ALTA</h3>
 
 
             <div class="soundtracks-alta">
@@ -146,7 +149,7 @@ rel="stylesheet">
             </div>
 
             
-            <h3 class="subtitulo-2">OBRAS EM ALTA</h3>
+            <h3 id="subtitulo-2" class="subtitulos">OBRAS EM ALTA</h3>
               <div class="carrossel-filmes">
 
             <button class="arrow left" onclick="scrollLeftBtn()">❮</button><!--carrossel da responsividade-->
@@ -249,12 +252,9 @@ rel="stylesheet">
 
             </div>
         </footer>
-        <div id="teste">
-            <p>ola terra ola ola terra ola</p>
-        </div>
+    
 
 
-    </div><!-- fim do wraap -->
     
         <script src="src/js/script.js"></script>
         <script src="src/js/musica.js"></script>

@@ -22,13 +22,9 @@ body{
 #teste{
   display: none;
 }
-  .wrapper {
- min-height: 100vh;      /* página sempre do tamanho da tela */
-  display: flex;          /* NÃO é no body */
-  flex-direction: column; /* conteúdo em coluna */
-  }
   main{
   flex: 1;
+  padding: 10px;
 }
 
 header{
@@ -155,15 +151,25 @@ header{
    transition: 0.4s;
 }
 
-
-.subtitulo-1{
-    color:var(--bege);
+#busca-responsividade{
+    height: 25px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: #f6e0d2;
+    width: 200px;
+    padding: 5px;
+    font-weight: bold;
+    display:none;
+    
+  }
+  .subtitulos{
+     color:var(--bege);
     margin:23px;
     margin-left: 35px;
     font-size: 1.4rem;
     font-family: 'odor mean chey';
     font-weight: 100;
-}
+  }
 .soundtracks-alta{
    display: flex;
    margin: 30px;
@@ -183,15 +189,6 @@ header{
 .msc img:hover{
     transform: scale(1.06);
     transition: 0.3s;
-}
-.subtitulo-2{
-     color:var(--bege);
-    margin:23px;
-    margin-left: 35px;
-    font-size: 1.4rem;
-    font-family: "odor mean chey";
-    font-weight: 100;
-
 }
 .uniao-imagem-nome-data{
   display: flex;
@@ -270,7 +267,7 @@ footer{
   margin-top: 30px;
     background: var(--vermelho);
     display: flex;
-   min-height: 100px;
+   height: 100px;
     width: 100%;
     text-align: center;
     color: var(--bege);
@@ -511,24 +508,75 @@ body {
 
 
 /* medida para celular pequeno */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
 
   header{
    padding-top: 20px;
   }
   #busca{
-    height: 23px;
-    width: 120px;
-   
+    display: none;
   }
   #letreiro{
-    height: 43px;
+    height: 38px;
     width: auto;
   }
    .hamburguer{
     z-index: 7;
-  }
+   }
+  .barra {
+   width: 25px;
+   height: 2px;
 }
+#espaço-busca{
+  display: flex;
+ justify-content: center;
+ padding: 0;
+ margin-bottom: 20px;
+
+}
+#busca-responsividade{
+    height: 16px;
+    width: 200px;
+    display: flex;
+    margin: 0;
+  }
+  .subtitulos{
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .soundtracks-alta{
+   margin:10px;
+   margin-top: 15px;
+}
+  .msc img{
+    width: 96px;
+    margin-left: 10px;   
+}
+.filmes{
+   margin-top: 15px;
+  gap: 5px;
+  margin-left:0;
+ 
+  
+}
+.filme img{
+    width: 147px;
+    height: 210px;
+    object-fit: cover;
+}
+.nome-filme{
+    font-size: 13px;
+}
+#velozes{
+   font-size: 13px;
+}
+.ano-lanc{
+      font-size: 0.7rem;
+}
+  }
+
 
 
 
