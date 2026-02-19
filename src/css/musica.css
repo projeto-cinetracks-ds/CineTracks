@@ -445,7 +445,7 @@ footer{
 
   /* animação */
   .hamburguer.active .barra:first-child {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
 
   .hamburguer.active .barra:nth-child(2) {
@@ -453,7 +453,7 @@ footer{
   }
 
   .hamburguer.active .barra:last-child {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
   .dropdown-menu {
     position: static; /* fica dentro do menu */
@@ -519,3 +519,65 @@ footer{
   left: 50px;
 }
 }
+
+@media (max-width: 400px) {
+   header{
+   padding-top: 20px;
+  }
+   #letreiro{
+    height: 38px;
+    width: auto;
+  }
+   .barra {
+   width: 25px;
+   height: 2px;
+}
+.progress-container{
+width: 200px;
+}
+.player{
+  margin-top: 0;
+}
+.uniao-texto-play{
+  gap:0;
+}
+
+footer{ 
+    height: 55px;
+    width: 100%;
+    margin-bottom: 2px;
+     min-height: 0;
+    
+  }
+  #direitos-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+.direito-txt{
+  font-size: 0.7rem;
+}
+#copy{
+  font-family: 'open sans';
+  margin-right: 3px;
+  margin-top: auto;
+}
+#tracks-footer{
+  font-family: 'Etna';
+  margin-top: auto;
+}
+#cine-footer{
+  font-family: 'norwester';
+  margin-top: auto;
+}
+#img-footer{
+  gap:7px;
+  display: flex;
+  justify-content: center;
+}
+.icone{
+    width: 20px;
+    margin-top: 5px;
+}
+}
+

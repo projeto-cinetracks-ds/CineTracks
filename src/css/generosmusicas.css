@@ -148,6 +148,17 @@ main{
     display: flex;
     flex-direction: column;
 }
+#busca-responsividade{
+    height: 25px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: #f6e0d2;
+    width: 200px;
+    padding: 5px;
+    font-weight: bold;
+    display:none;
+    
+  }
 .titulo{
     color:white;
      font-size: 1.4rem;
@@ -388,28 +399,40 @@ display: flex;
     width: auto;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     header{
    padding-top: 20px;
   }
   #busca{
-    height: 23px;
-    width: 120px;
+display:none;
    
   }
   #letreiro{
-    height: 43px;
+  height: 38px;
     width: auto;
   }
    .hamburguer{
     z-index: 8;
+  }
+  #espaço-busca{
+  display: flex;
+ justify-content: center;
+ padding: 0;
+ margin-bottom: 20px;
+
+}
+  #busca-responsividade{
+    height: 16px;
+    width: 200px;
+    display: flex;
+    margin: 0;
   }
 .img{
     width: 95px;      
   height: 95px;
 }
 .lista-musicas{
-  gap: 28px;
+  gap: 17px;
 }
 .seta{
   top:51%;
@@ -421,7 +444,7 @@ display: flex;
     margin-left: 5px;
 }
 .uniao-titulo-carreira{
-  gap:20px;
+  gap:7px;
   display: flex;
   flex-direction: column;
 }

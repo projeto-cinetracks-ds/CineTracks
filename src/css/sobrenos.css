@@ -522,12 +522,47 @@ footer{
 
 
 /* medida para celular pequeno */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   #titulodesenvolvedoras{
     margin: 0 10px;
-    font-size: 6.7;
+    font-size: 3rem;
   }
-
+footer{ 
+    height: 55px;
+    width: 100%;
+    margin-bottom: 2px;
+    min-width: 0;
+  }
+  #direitos-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+.direito-txt{
+  font-size: 0.7rem;
+}
+#copy{
+  font-family: 'open sans';
+  margin-right: 3px;
+  margin-top: auto;
+}
+#tracks-footer{
+  font-family: 'Etna';
+  margin-top: auto;
+}
+#cine-footer{
+  font-family: 'norwester';
+  margin-top: auto;
+}
+#img-footer{
+  gap:7px;
+  display: flex;
+  justify-content: center;
+}
+.icone{
+    width: 20px;
+    margin-top: 5px;
+}
 }
 
 

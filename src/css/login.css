@@ -169,6 +169,7 @@ form h2{
     width: 400px;
     height: 50px;
     border-radius: 30px;
+     padding-left:4px ;
 }
 #sem-conta{
   font-family: 'open sans';
@@ -324,7 +325,7 @@ footer{
   }
   /* animação */
   .hamburguer.active .barra:first-child {
-    transform: translateY(10px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
 
   .hamburguer.active .barra:nth-child(2) {
@@ -332,7 +333,7 @@ footer{
   }
 
   .hamburguer.active .barra:last-child {
-    transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
   .dropdown-menu {
     position: static; 
@@ -385,10 +386,76 @@ main{
 width: 80%;
 }
 }
-@media (max-width: 480px) {
+@media (max-width: 400px) {
+  header{
+   padding-top: 20px;
+  }
+  body{
+    background-size:1495px;
+  }
+  #letreiro{
+   height: 38px;
+    width: auto;
+  }
+   .barra {
+   width: 25px;
+   height: 2px;
+}
   form{
 width: 80%;
+margin-top: 90px;
 }
+form h2{
+font-size: 1.7rem;
+}
+.txtinput{
+    width: 250px;
+    height: 30px;
+    font-size: 0.7rem;
+   
+}
+footer{ 
+    height: 55px;
+    width: 100%;
+    margin-top: 150px;
+    min-height: 0;
+  }
+  #direitos-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+.direito-txt{
+  font-size: 0.7rem;
+}
+#copy{
+  font-family: 'open sans';
+  margin-right: 3px;
+  margin-top: auto;
+}
+#tracks-footer{
+  font-family: 'Etna';
+  margin-top: auto;
+}
+#cine-footer{
+  font-family: 'norwester';
+  margin-top: auto;
+}
+#img-footer{
+  gap:7px;
+  display: flex;
+  justify-content: center;
+}
+.icone{
+    width: 20px;
+    margin-top: 5px;
+}
+
+}
+@media (max-width: 370px) {
+  body{
+    background-size:cover;
+  }
 
 }
 

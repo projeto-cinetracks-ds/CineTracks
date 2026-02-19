@@ -172,8 +172,7 @@ header{
    margin-top: 15px;
    margin-left: 0;
    animation: efeito1 100s linear infinite;
-    gap: 20px;
-   
+    gap: 60px;
    
 }
 .msc img{
@@ -553,6 +552,24 @@ footer{
   .soundtracks-alta{
    margin:10px;
    margin-top: 15px;
+}
+ .soundtracks-alta{
+    animation: none;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   gap: 15px;
+  }
+  .soundtracks-alta::-webkit-scrollbar {
+  height: 6px;
+}
+
+.soundtracks-alta::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.soundtracks-alta::-webkit-scrollbar-thumb {
+  background: #520909;
+  border-radius: 10px;
 }
   .msc img{
     width: 96px;
