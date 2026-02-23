@@ -495,5 +495,44 @@ display: flex;
 .nome-obra{
   font-size: 0.9rem;
 }
+footer{ 
+    height: 55px;
+    width: 100%;
+    margin-bottom: 2px;
+    min-height: 0;
+  }
+  #direitos-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+.direito-txt{
+  font-size: 0.7rem;
+}
+#copy{
+  font-family: 'open sans';
+  margin-right: 3px;
+  margin-top: auto;
+}
+#tracks-footer{
+  font-family: 'Etna';
+  margin-top: auto;
+}
+#cine-footer{
+  font-family: 'norwester';
+  margin-top: auto;
+}
+#img-footer{
+  gap:7px;
+  display: flex;
+  justify-content: center;
+}
+.icone{
+    width: 20px;
+    margin-top: 5px;
+}
+.icones{
+  gap:0;
+}
   }
 

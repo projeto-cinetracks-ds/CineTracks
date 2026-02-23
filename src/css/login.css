@@ -184,14 +184,14 @@ form h2{
 }  
 
 footer{
-  margin-top: 30px;
-    background: var(--vermelho);
+  background: var(--vermelho);
     display: flex;
-   min-height: 100px;
+   height: 100px;
     width: 100%;
     text-align: center;
     color: var(--bege);
     justify-content: center;
+    margin-top: auto;
 }
 .btn-acessar{
   font-family: 'open sans';
@@ -417,7 +417,8 @@ font-size: 1.7rem;
 footer{ 
     height: 55px;
     width: 100%;
-    margin-top: 150px;
+    margin-top: 165px;
+
   }
   #direitos-footer{
   display: flex;

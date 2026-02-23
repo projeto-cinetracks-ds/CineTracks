@@ -321,7 +321,7 @@ footer{
   margin-top: 30px;
     background: #000;
     display: flex;
-   min-height: 100px;
+   /* min-height: 100px; */
     width: 100%;
     text-align: center;
     color: var(--bege);
@@ -348,10 +348,6 @@ footer{
 }
 #cine-footer{
   font-family: 'norwester';
-}
-#icones{
-   gap:17px;
-  display: flex;
 }
 .icone{
     width: 40px;
@@ -534,7 +530,7 @@ footer{
     height: 55px;
     width: 100%;
     margin-bottom: 2px;
-    min-height: 0;
+     min-height: 0;
   }
   #direitos-footer{
   display: flex;
@@ -548,14 +544,17 @@ footer{
   font-family: 'open sans';
   margin-right: 3px;
   margin-top: auto;
+    font-size: 0.8rem;
 }
 #tracks-footer{
   font-family: 'Etna';
   margin-top: auto;
+    font-size: 0.8rem;
 }
 #cine-footer{
   font-family: 'norwester';
   margin-top: auto;
+  font-size: 0.8rem;
 }
 #img-footer{
   gap:7px;
@@ -565,9 +564,6 @@ footer{
 .icone{
     width: 20px;
     margin-top: 5px;
-}
-.icones{
-  gap:0;
 }
 }
 
