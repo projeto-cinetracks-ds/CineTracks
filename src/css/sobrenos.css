@@ -523,6 +523,9 @@ footer{
 
 /* medida para celular pequeno */
 @media (max-width: 400px) {
+  #cine-letreiro{
+    height: 60px;
+  }
   #titulodesenvolvedoras{
     margin: 0 10px;
     font-size: 3rem;
@@ -531,7 +534,7 @@ footer{
     height: 55px;
     width: 100%;
     margin-bottom: 2px;
-    min-width: 0;
+    min-height: 0;
   }
   #direitos-footer{
   display: flex;
@@ -562,6 +565,9 @@ footer{
 .icone{
     width: 20px;
     margin-top: 5px;
+}
+.icones{
+  gap:0;
 }
 }
 

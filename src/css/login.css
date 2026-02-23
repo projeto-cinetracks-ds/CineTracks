@@ -418,7 +418,6 @@ footer{
     height: 55px;
     width: 100%;
     margin-top: 150px;
-    min-height: 0;
   }
   #direitos-footer{
   display: flex;
