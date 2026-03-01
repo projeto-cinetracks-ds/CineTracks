@@ -310,12 +310,9 @@ footer{
   }
   #login{
     color: white;
+        padding:0px 0px;
 
   }
-  .barra {
-   width: 40px;
-   height: 4px;
-}
    .hamburguer{
     display: flex;
     margin-right: auto 0;  
@@ -414,7 +411,7 @@ footer{
     height: 55px;
     width: 100%;
     margin-top: 165px;
-
+     padding-bottom: 10px;
   }
   #direitos-footer{
   display: flex;
@@ -428,14 +425,17 @@ footer{
   font-family: 'open sans';
   margin-right: 3px;
   margin-top: auto;
+     font-size: 0.8rem;
 }
 #tracks-footer{
   font-family: 'Etna';
   margin-top: auto;
+     font-size: 0.8rem;
 }
 #cine-footer{
   font-family: 'norwester';
   margin-top: auto;
+     font-size: 0.8rem;
 }
 #img-footer{
   gap:7px;

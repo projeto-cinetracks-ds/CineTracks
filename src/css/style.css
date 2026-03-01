@@ -389,6 +389,7 @@ display: flex;
   }
   #login{
     color: white;
+    padding:0px 0px;
   }
   .menu-header.active{
     display: flex;
@@ -610,14 +611,17 @@ footer{
   font-family: 'open sans';
   margin-right: 3px;
   margin-top: auto;
+     font-size: 0.8rem;
 }
 #tracks-footer{
   font-family: 'Etna';
   margin-top: auto;
+     font-size: 0.8rem;
 }
 #cine-footer{
   font-family: 'norwester';
   margin-top: auto;
+     font-size: 0.8rem;
 }
 #img-footer{
   gap:7px;
