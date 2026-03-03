@@ -439,6 +439,7 @@ display:none;
 }
   .lista-musicas::-webkit-scrollbar {
   height: 6px;
+  margin-left: 5px;
 }
 
 .lista-musicas::-webkit-scrollbar-track {
