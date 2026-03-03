@@ -434,9 +434,24 @@ display:none;
 }
 .lista-musicas{
   gap: 17px;
+   scroll-behavior: smooth;
+   overflow-x: auto;
+}
+  .lista-musicas::-webkit-scrollbar {
+  height: 6px;
+}
+
+.lista-musicas::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lista-musicas::-webkit-scrollbar-thumb {
+  background: #5209099c;
+  border-radius: 10px;
 }
 .seta{
   top:51%;
+  display: none;
 }
 
 .titulo{

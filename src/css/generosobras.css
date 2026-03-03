@@ -476,9 +476,26 @@ display: flex;
    width:110.8331px;    
   height: 158.333px;
 }
+.seta{
+  display:none;
+}
 .lista-musicas{
   gap:42px;
   padding-top: 9px;
+   scroll-behavior: smooth;
+   overflow-x: auto;
+}
+.lista-musicas::-webkit-scrollbar {
+  height: 6px;
+}
+
+.lista-musicas::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.lista-musicas::-webkit-scrollbar-thumb {
+  background: #5209099c;
+  border-radius: 10px;
 }
 .titulo{
      font-size: 1.10833333rem;
