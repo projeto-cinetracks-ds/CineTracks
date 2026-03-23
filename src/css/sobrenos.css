@@ -349,9 +349,14 @@ footer{
 #cine-footer{
   font-family: 'norwester';
 }
+#icones{
+  gap:17px;
+  display: flex;
+}
 .icone{
     width: 40px;
     margin-top: 12px; 
+    gap:17px;
 }
 
 
