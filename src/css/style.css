@@ -121,10 +121,10 @@ header{
     position: relative;
     overflow: hidden;
     font-family: 'odor mean chey';
-      background-color:#000; /* fundo da caixa */
-  color: #EFDAA4;                         /* cor do texto */
-  padding: 5px 10px;                   /* espaço interno */
-  border-radius: 20px;                   /* cantos arredondados */
+      background-color:#000; 
+  color: #EFDAA4;                        
+  padding: 5px 10px;                   
+  border-radius: 20px;                  
   width: fit-content; 
 }
   
@@ -210,9 +210,10 @@ header{
 .filmes{
    display: flex;
    margin-top: 30px;
-  gap: 27px;
-  justify-content: space-evenly;
+  gap: 40px;
+  justify-content:space-around;
   margin-left: 30px;
+  margin-right: 0px;
  
   
 }

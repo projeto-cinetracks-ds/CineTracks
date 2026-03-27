@@ -186,7 +186,7 @@ form h2{
 footer{
   background: var(--vermelho);
     display: flex;
-   height: 100px;
+   /* height: 100px; */
     width: 100%;
     text-align: center;
     color: var(--bege);
