@@ -584,6 +584,9 @@ footer{
    margin:10px;
    margin-top: 15px;
 }
+.manual{
+   overflow-x:auto;
+}
  .soundtracks-alta{
     animation: none;
    overflow-x: auto;
