@@ -21,41 +21,52 @@ if (nome.includes(termo)) {
 
     });
 }
-// SCRIPT DO CARROSSEL-FILMES, NA RESPONSIVIDADE
- (function () {
-  const mediaQuery = window.matchMedia("(max-width: 768px)");
-  let filmes;
 
-  function initMobileCarousel() {
-    if (!mediaQuery.matches) return;
+// treco de rodar com clique, igual do descubra
+document.addEventListener('DOMContentLoaded', () => {
 
-    filmes = document.querySelector(".filmes");
-    if (!filmes) return;
-  }
+  document.querySelectorAll('.carrossel-filmes').forEach(filmes => {
 
-  // FUNÇÕES GLOBAIS (para os botões)
-  window.scrollRight = function () {
-    if (!mediaQuery.matches || !filmes) return;
+    const lista = filmes.querySelector('.filmes');
+    const btnDireita = filmes.querySelector('.arrow.right');
+    const btnEsquerda = filmes.querySelector('.arrow.left');
 
-    filmes.scrollLeft += 150;
-  };
+    if (!lista || !btnDireita || !btnEsquerda) return;
 
-  window.scrollLeftBtn = function () {
-    if (!mediaQuery.matches || !filmes) return;
+    // Passo proporcional à largura visível da lista (80%)
+    function getPasso() {
+      return lista.clientWidth * 0.3;
+    }
 
-    filmes.scrollLeft -= 150;
-  };
+    function atualizarSetas() {
+      const maxScroll = lista.scrollWidth - lista.clientWidth;
 
-  // inicializa quando a página carregar
-  window.addEventListener("load", initMobileCarousel);
+      btnEsquerda.classList.toggle('oculta', lista.scrollLeft <= 0);
+      btnDireita.classList.toggle('oculta', lista.scrollLeft >= maxScroll - 1);
+    }
 
-  // se mudar de tamanho (mobile ↔ desktop)
-  mediaQuery.addEventListener("change", () => {
-    filmes = mediaQuery.matches
-      ? document.querySelector(".filmes")
-      : null;
+    btnDireita.addEventListener('click', () => {
+      lista.scrollBy({ 
+        left: getPasso(), 
+        behavior: 'smooth' 
+      });
+    });
+
+    btnEsquerda.addEventListener('click', () => {
+      lista.scrollBy({ 
+        left: -getPasso(), 
+        behavior: 'smooth' 
+      });
+    });
+
+    // Atualiza setas quando o usuário scrolla manualmente
+    lista.addEventListener('scroll', atualizarSetas);
+
+    // Estado inicial das setas
+    atualizarSetas();
   });
-})();
+
+});
 // HAMBURGUER
 const hamburguer = document.querySelector('.hamburguer');
 const headerMenu = document.querySelector('.menu-header');
@@ -96,6 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+
 
 
 

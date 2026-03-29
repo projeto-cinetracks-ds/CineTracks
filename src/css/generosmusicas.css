@@ -447,7 +447,7 @@ display:none;
 }
 
 .lista-musicas::-webkit-scrollbar-thumb {
-  background: #5209099c;
+  background:linear-gradient(to right,rgb(32, 1, 1), #5209098e,#3e2a008e,#5209098e,rgb(32, 1, 1));
   border-radius: 10px;
 }
 .seta{

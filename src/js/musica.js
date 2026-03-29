@@ -24,9 +24,9 @@ const obras = {
     imagem: "../../../CineTracks/src/assets/img/sebebernaocaseposter.jpg"
   },
   "velozes-furiosos": {
-    titulo:"Velozes e Furiosos: Desafio em Tóquio",
-    tipo:"Filme",
-    imagem:"../../../CineTracks/src/assets/img/velozesefuriosostokio.jpg"
+    titulo:"Velozes e Furiosos",
+    tipo:"Franquia de Filmes",
+    imagem:"../../../CineTracks/src/assets/img/velozesefuriosos.poster.webp"
   },
   "aranhaverso":{
     titulo:"Homem aranha no Aranhaverso",
@@ -73,6 +73,11 @@ const obras = {
     titulo:"It",
     tipo:"Saga",
     imagem:"../../../CineTracks/src/assets/img/itacoisa.png"
+   },
+    "mammamia":{
+    titulo:"Mamma mia",
+    tipo:"Filme",
+    imagem:"../../../CineTracks/src/assets/img/mammamia.jpeg"
    }
   // adicione mais obras aqui se precisar
 };

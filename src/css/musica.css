@@ -7,7 +7,7 @@
 :root{
     --gradvermelho:linear-gradient(to right,#000000,#000,#620606,#f0c68b,#EFDAA4);
      --gradescuro:linear-gradient(to right, #443824, #220202, #000, #220202, #443824);
-     --gradescuropequeno:linear-gradient(to right, #332917, #190202, #000, #190202, #332917);
+     --gradescuropequeno:linear-gradient(to right,#1d1100, #120101, #000, #220101, #311d01);
       --gradheaderpequeno:linear-gradient(to right,#000000,#000,#3d0505,#620606);
       --gradbarbie:linear-gradient(to right, #442432, #220211, #000, #220211, #442432);
        --gradescuropequenobarbie:linear-gradient(to right,  #220211, #1b010d, #000,  #1b010d,  #220211);

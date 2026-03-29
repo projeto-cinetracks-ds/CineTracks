@@ -17,7 +17,7 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
   main{
   padding: 10px;
@@ -171,9 +171,31 @@ header{
    margin: 30px;
    margin-top: 15px;
    margin-left: 0;
-   animation: efeito1 100s linear infinite;
+   animation: efeito1 150s linear infinite;
     gap: 60px;
-   
+    width: max-content;
+     overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.manual:hover .soundtracks-alta {
+  animation-play-state: paused;
+}
+.manual{
+   overflow-x: hidden;
+}
+.manual:hover {
+  overflow-x: auto; 
+}
+.manual::-webkit-scrollbar{
+  height: 9px;
+  
+}
+.manual::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right,black, #5209098e,#3e2a008e,#5209098e, rgb(0, 0, 0));
+  border-radius: 10px;
+}
+.manual::-webkit-scrollbar-track {
+ background: transparent;
 }
 .msc img{
     margin: 5px;
@@ -191,7 +213,7 @@ header{
   align-items: center;
 }
 .carrossel-filmes {
-  position: relative;
+  position:relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -204,8 +226,18 @@ header{
   padding: 0.5rem;
   cursor: pointer;
   border-radius: 50%;
-  z-index: 2;
-  display: none;
+  z-index: 9;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  }
+  .left { left: 5px; }
+  .right { right: 5px; }
+
+.arrow.oculta{
+  opacity: 0;
+  pointer-events:none;
 }
 .filmes{
    display: flex;
@@ -214,6 +246,8 @@ header{
   justify-content:space-around;
   margin-left: 30px;
   margin-right: 0px;
+   overflow-x: auto;
+  scroll-behavior: smooth;
  
   
 }
@@ -319,7 +353,7 @@ footer{
 
 /* RESPONSIVIDADE  */
 /* responnsividade para as setas aparecerem assim que o primeiro filme sair de tela */
-@media (max-width: 1388px) { 
+/* @media (max-width: 1388px) { 
   .carrossel-filmes{
   position: relative;
 }
@@ -331,7 +365,7 @@ footer{
   }
   .left { left: 5px; }
   .right { right: 5px; }
-}
+} */
 
 
 
@@ -565,7 +599,7 @@ footer{
 }
 
 .soundtracks-alta::-webkit-scrollbar-thumb {
-  background: #520909;
+  background:linear-gradient(to right,rgb(32, 1, 1), #5209098e,#3e2a008e,#5209098e,rgb(32, 1, 1));
   border-radius: 10px;
 }
   .msc img{
