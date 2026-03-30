@@ -353,7 +353,7 @@ footer{
     text-align: center;
     color: var(--bege);
     justify-content: center;
-    margin-top: auto;
+    margin-top: 5px;
 }
 .footer-container{
   margin-top: 5px;
