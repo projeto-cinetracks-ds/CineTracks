@@ -346,17 +346,17 @@ main{
   color: gold;
 }
 footer{
-  margin-top: 30px;
     background: var(--vermelho);
     display: flex;
-   min-height: 100px;
+   height: 80px;
     width: 100%;
     text-align: center;
     color: var(--bege);
     justify-content: center;
+    margin-top: auto;
 }
 .footer-container{
-  margin-top: 10px;
+  margin-top: 5px;
 }
 @font-face {
   font-family: 'Etna';
@@ -366,23 +366,29 @@ footer{
   display: flex;
   justify-content: center;
   margin-top: 8px;
+ font-size: 0.9rem;
 }
 #copy{
   font-family: 'open sans';
-   margin-right: 3px;
+  margin-right: 3px;
+ font-size: 0.9rem;
 }
 #tracks-footer{
   font-family: 'Etna';
+ font-size: 0.9rem;
 }
 #cine-footer{
   font-family: 'norwester';
+   font-size: 0.9rem;
 }
 #img-footer{
-  gap:17px;
+  gap:14px;
   display: flex;
+  justify-content: center;
+
 }
 .icone{
-    width: 40px;
+    width: 30px;
     margin-top: 12px;
 }
 
