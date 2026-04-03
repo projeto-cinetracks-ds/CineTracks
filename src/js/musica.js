@@ -95,7 +95,7 @@ function stopAllAudios() {
   });
 
   buttons.forEach(btn => {
-    btn.textContent = '▶';
+    playPauseBtn.innerHTML = '&#9654;';
     btn.classList.remove('active');
   });
 
@@ -190,7 +190,7 @@ cards.forEach((card, index) => {
   function resetCard() {
     audio.pause();
     audio.currentTime = 0;
-    playPauseBtn.textContent = '▶';
+    playPauseBtn.innerHTML = '&#9654;';
     playPauseBtn.classList.remove('active');
     player.classList.add('hidden');
   }
@@ -209,7 +209,7 @@ cards.forEach((card, index) => {
 
     prevAudio.pause();
     prevAudio.currentTime = 0;
-    prevBtn.textContent = '▶';
+    playPauseBtn.innerHTML = '&#9654;';
     prevBtn.classList.remove('active');
     prevPlayer.classList.add('hidden'); // esconde player
     prevPlayer.classList.remove('active'); // remove classe de exibição
@@ -219,7 +219,7 @@ cards.forEach((card, index) => {
   audio.play();
 
    // atualiza interface
-  playPauseBtn.textContent = '⏸';
+  playPauseBtn.innerHTML = '&#10074;&#10074;';
   playPauseBtn.classList.add('active');     // marca botão ativo
   player.classList.remove('hidden');        // remove hidden
   player.classList.add('active');           // mostra player
@@ -241,7 +241,7 @@ cards.forEach((card, index) => {
       playMusic();
     } else {
       audio.pause();
-      playPauseBtn.textContent = '▶';
+      playPauseBtn.innerHTML = '&#9654;';
       playPauseBtn.classList.add('active');
     }
   });
@@ -374,7 +374,7 @@ if (musicToPlay) {
     currentIndex = cardsDaObra.indexOf(card);
 
     // estado visual correto
-    button.textContent = '⏸';
+    playPauseBtn.innerHTML = '&#10074;&#10074;';
     button.classList.add('active');
 
     // opcional: marca o card como tocando

@@ -7,6 +7,13 @@ document.getElementById("busca").addEventListener("keydown", function(e) {
     }
 });
 
+// js do busca responsivo
+document.getElementById("busca-responsividade").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        pesquisarFilmes();
+    }
+});
+
 // função responsável por filtrar os filmes na tela
 function pesquisarFilmes() {
     // pega o texto digitado e transforma em minúsculo (pra facilitar comparação)

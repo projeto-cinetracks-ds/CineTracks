@@ -54,9 +54,33 @@ document.getElementById("busca").addEventListener("keydown", function(e) {
     }
 });
 
+// js do busca responsivo
+document.getElementById("busca-responsividade").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        pesquisarFilmes();
+    }
+});
+
 // uma função que filtra obras de acordo com o termo digitado
 function pesquisarFilmes() {
     const termo = document.getElementById("busca").value.toLowerCase();
+    const filmes = document.querySelectorAll(".obra");
+
+
+    filmes.forEach(obra => {
+        const nome = obra.querySelector(".nome-obra").textContent.toLowerCase();
+if (nome.includes(termo)) {
+    obra.style.display = "flex";
+    obra.style.flexDirection = "column";
+} else {
+    obra.style.display = "none";
+}
+
+    });
+}
+
+function pesquisarFilmes() {
+    const termo = document.getElementById("busca-resposividade").value.toLowerCase();
     const filmes = document.querySelectorAll(".obra");
 
 
