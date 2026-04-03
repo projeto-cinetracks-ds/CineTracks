@@ -1,7 +1,7 @@
 // const params = new URLSearchParams(window.location.search);
 // const obraId = params.get('obra');
 // ========================================
-// 0️⃣ DADOS DAS OBRAS
+//  DADOS DAS OBRAS (tipo um mini banco de dados, só que no js)
 const obras = {
   "stranger-things": {
     titulo: "Stranger Things",
@@ -82,14 +82,16 @@ const obras = {
   // adicione mais obras aqui se precisar
 };
 
+// função que para TODAS as músicas do site
+// usada para garantir que só uma música toque por vez
 function stopAllAudios() {
   const audios = document.querySelectorAll('audio');
   const buttons = document.querySelectorAll('.play-pause');
   const cards = document.querySelectorAll('.music-card');
 
   audios.forEach(audio => {
-    audio.pause();
-    audio.currentTime = 0;
+    audio.pause();  // pausa o áudio
+    audio.currentTime = 0;  // remove estado ativo
   });
 
   buttons.forEach(btn => {
@@ -98,17 +100,19 @@ function stopAllAudios() {
   });
 
   cards.forEach(card => {
-    card.classList.remove('playing');
+    card.classList.remove('playing'); // remove destaque visual
   });
 }
 
 // ========================================
-// 1️⃣ PEGA O PARÂMETRO DA URL
+// 1- PEGA O PARÂMETRO DA URL
+// pega informações da URL (ex: ?obra=batman)
 const params = new URLSearchParams(window.location.search);
 const obraAtual = params.get('obra'); // esse é o ID da obra
 
 // ========================================
-// 2️⃣ ESCONDE MÚSICAS QUE NÃO SÃO DA OBRA ATUAL
+// 2- ESCONDE MÚSICAS QUE NÃO SÃO DA OBRA ATUAL
+// remove da tela tudo que não pertence à obra selecionada
 const cards = document.querySelectorAll('.music-card'); // NodeList de todas as músicas
 
 cards.forEach(card => { // 'card' = cada music-card
@@ -117,6 +121,7 @@ cards.forEach(card => { // 'card' = cada music-card
   }
 });
 
+// faz o mesmo processo para seções completas da página
 const obrasSections = document.querySelectorAll('.bloco-obra');
 obrasSections.forEach(section => {
   if (section.dataset.obra !== obraAtual) {
@@ -125,7 +130,8 @@ obrasSections.forEach(section => {
 });
 
 // ========================================
-// 3️⃣ ATUALIZA CARD DO FILME/OBRA
+// 3- ATUALIZA CARD DO FILME/OBRA
+// troca imagem, título e tipo dinamicamente
 if (obraAtual && obras[obraAtual]) {
   const obra = obras[obraAtual];
   const imgObra = document.querySelector('.img-obra');
@@ -137,7 +143,8 @@ if (obraAtual && obras[obraAtual]) {
   if (tipoObra) tipoObra.textContent = obra.tipo;
 }
 
-
+  // 4- SISTEMA DE FAVORITOS (ESTRELA)
+  // permite marcar/desmarcar musicas como favoritas
 
   const stars = document.querySelectorAll('.star-btn');
 
@@ -152,24 +159,34 @@ if (obraAtual && obras[obraAtual]) {
 
 
 
- 
-let currentIndex = null;
-let currentCard = null;
-let currentAudio = null;
+  // ========================================
+  // 5- CONTROLE GLOBAL DO PLAYER
+  // guarda qual música esta tocando atualmente 
+  let currentIndex = null;
+  let currentCard = null;
+  let currentAudio = null;
 
+
+// ========================================
+// 6- LOOP PRINCIPAL DOS CARDS DE MÚSICA
+
+// adiciona comportamento individual para cada músicad
 cards.forEach((card, index) => {
+
+  // seleciona elementos internos do card
   const audio = card.querySelector('audio');
-  const title = card.querySelector('.music-title'); //hahahahahahahahajaakaja
+  const title = card.querySelector('.music-title'); 
   const playPauseBtn = card.querySelector('.play-pause');
   const prevBtn = card.querySelector('.prev');
   const nextBtn = card.querySelector('.next');
   const player = card.querySelector('.player');
 
+  // elementos da barra de progresso
   const progress = card.querySelector('.progress');
   const currentTimeEl = card.querySelector('.current-time');
   const durationEl = card.querySelector('.duration');
 
-  // 🔁 Esconde player e reseta estado
+  // esconde player e reseta estado
   function resetCard() {
     audio.pause();
     audio.currentTime = 0;
@@ -178,9 +195,13 @@ cards.forEach((card, index) => {
     player.classList.add('hidden');
   }
 
-  // ▶️ Tocar música
+    
+    // 7- FUNÇÃO PRINCIPAL DE TOCAR MÚSICA
+    // garante que so uma música toque por vez
+    // tocar música
+
   function playMusic() {
-  // se outra música estiver ativa
+  // se outra música estiver ativa, ele para ela
   if (currentCard && currentCard !== card) {
     const prevAudio = currentCard.querySelector('audio');
     const prevPlayer = currentCard.querySelector('.player');
@@ -194,22 +215,27 @@ cards.forEach((card, index) => {
     prevPlayer.classList.remove('active'); // remove classe de exibição
   }
 
+  // toca a música atual
   audio.play();
+
+   // atualiza interface
   playPauseBtn.textContent = '⏸';
   playPauseBtn.classList.add('active');     // marca botão ativo
   player.classList.remove('hidden');        // remove hidden
   player.classList.add('active');           // mostra player
+  
+  // atualiza controle global
   currentCard = card;
   currentAudio = audio;
   currentIndex = index;
 }
   
 // CODIGO CERTOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-  // 👉 clicar no nome
+  //clicar no nome
   title.addEventListener('click', playMusic);  
    
-
-  // ▶️ / ⏸
+  // Botão play/pausa
+  
   playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
       playMusic();
@@ -220,14 +246,14 @@ cards.forEach((card, index) => {
     }
   });
 
-  // ⏮ anterior
+  // anterior
   prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
       cards[currentIndex - 1].querySelector('.music-title').click();
     }
   });
 
-  // ⏭ próxima
+  // próxima
   nextBtn.addEventListener('click', () => {
     if (currentIndex < cards.length - 1) {
       cards[currentIndex + 1].querySelector('.music-title').click();
@@ -239,7 +265,7 @@ cards.forEach((card, index) => {
     durationEl.textContent = formatTime(audio.duration);
   });
 
-  // progresso
+  // atualiza barra de progresso
   audio.addEventListener('timeupdate', () => {
     progress.value = (audio.currentTime / audio.duration) * 100;
     currentTimeEl.textContent = formatTime(audio.currentTime);
@@ -251,18 +277,15 @@ cards.forEach((card, index) => {
   });
 });
 
-// ⏱️ função global
+
+// FORMATA TEMPO (segundos → minutos:segundos)
+// 125 → 2:05
+// função global
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
   const seconds = Math.floor(time % 60).toString().padStart(2, '0');
   return `${minutes}:${seconds}`;
 }
-
-
-
-
-
-
 // HAMBURGUER HAMBURGUER
 const hamburguer = document.querySelector('.hamburguer');
 const headerMenu = document.querySelector('.menu-header');
@@ -315,7 +338,8 @@ document.querySelectorAll(".music-card").forEach(card => {
 });
 
 
-
+//  TOCAR MÚSICA VIA URL
+// Permite abrir o site já com uma música tocando (ex: ?play=audio1)
 // const params = new URLSearchParams(window.location.search);
 const musicToPlay = params.get('play');
 
@@ -325,7 +349,7 @@ if (musicToPlay) {
   if (audio) {
     const card = audio.closest('.music-card');
 
-    // 👉 lista correta de cards (APENAS os que estão na página)
+    // lista correta de cards (APENAS os que estão na página)
     // const cardsDaObra = [...document.querySelectorAll('.music-card')];
 
     const button = card.querySelector('.play-pause');
@@ -356,14 +380,14 @@ if (musicToPlay) {
     // opcional: marca o card como tocando
     card.classList.add('playing');
 
-    // ⏮ anterior
+    // anterior
   prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
       cards[currentIndex - 1].querySelector('.music-title').click();
     }
   });
 
-  // ⏭ próxima
+  // próxima
   nextBtn.addEventListener('click', () => {
     if (currentIndex < cards.length - 1) {
       cards[currentIndex + 1].querySelector('.music-title').click();
