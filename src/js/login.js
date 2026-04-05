@@ -44,3 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+// tela de carregamento
+window.addEventListener("load", function(){
+    setTimeout(() => {
+        document.getElementById("loading").style.opacity = "0";
+        document.getElementById("loading").style.transition = "opacity 0.5s ease";
+        
+        setTimeout(() => {
+            document.getElementById("loading").style.display = "none";
+        }, 500);
+
+    }, 1500);
+});
+
