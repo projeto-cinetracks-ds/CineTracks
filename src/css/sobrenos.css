@@ -139,14 +139,14 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
   padding: 20px;
 }
 #cine-letreiro{
-   height: 140px;
+   height: 120px;
   width: auto;
 }
 .container-cards{
   display: flex;
   justify-content: space-between;
   gap: 70px;
-  padding: 20px;
+  padding: 40px;
   margin-left: 25px;
   margin-right: 40px;
 }
@@ -183,7 +183,7 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
  margin-top: 10px;
 }
 .contatos-cinetracks{
-  width: 18%;
+  width: 13%;
 }
 .coluna-direita-cinetracks{
   width: 9070px;
@@ -206,7 +206,7 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
 .texto{
   text-align: justify;
   color: #ffff;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-family: 'open sans';
 }
 .titulo-card{
@@ -214,7 +214,7 @@ BLOCO 1 BLOCO 1 BLOCO 1  BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1 BLOCO 1
   font-family: 'bebas neue';
   text-align: center;
   margin-bottom: 10px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight:600;
 }
 /* BLOCO 2 BLOCO 2 BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 
@@ -229,7 +229,7 @@ BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO 2 BLOCO 2BLOCO
 }
 #titulodesenvolvedoras{
   font-family: 'norwester';
-  font-size: 7rem;
+  font-size: 6rem;
   text-align: center;
   color: #fff;
 }
